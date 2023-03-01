@@ -2,7 +2,7 @@
 
 inspired by https://github.com/sfgabe/OITProjects/tree/master/Baby_Buddy_Keypad and https://github.com/jeroenterheerdt/Baby-Buddy-Keypad. 
 
-I made a version of the baby buddy keypad, but I realize that it could actually be used for just about anyting inside Home Assistant
+I made a version of the baby buddy keypad, but I realize that it could actually be used for just about anyting inside Home Assistant, so I decided to make this public.
 
 Differences between this version and the original two apart the physical appearance are:
 - Uses ESP32 chip
@@ -11,7 +11,7 @@ Differences between this version and the original two apart the physical appeara
 
 ## Parts
 __Referral links:__
-- [8 Cherry MX Blue Switches ](https://amzn.to/3YT6VgA)
+- [8 Cherry MX Blue Switches](https://amzn.to/3YT6VgA)
 - [a ESP32 board](https://amzn.to/41l7mCi)
 - [Blank Keycaps](https://amzn.to/3SmIaqX)
 
@@ -19,21 +19,21 @@ Note: if you choose to use the above referral links, I may receive a _very_ smal
 If you don't wish to use the referral links above, feel free to use the non-referral links below:
 
 __Non-Referral links:__
-- [8 Cherry MX Blue Switches ](https://www.amazon.com/dp/B07KMXJ4KG)
+- [8 Cherry MX Blue Switches](https://www.amazon.com/dp/B07KMXJ4KG)
 - [a ESP32 board](https://www.amazon.com/dp/B08DR31G4G)
 - [Blank Keycaps](https://www.amazon.com/dp/B01M023NFK)
 
 
 
 - Home Assistant installation with ESPHome
-- enclosure (I used some wood and glue)
+- enclosure (I 3D printed my enclosure)
 
 
 ## Assembly
 - all switches are connected to VIN and to their respective GPIOs (see ESPHome YAML files)
+-- Note, your GPIO pins may be different based on the version of the board you use.
 
 ## Programming
-- Use ESPHome to load the battery powered or USB powered code
 - Add your ESP device to Home Assistant once detected
 - Add the Baby Buddy HA Integration if you haven't already.
 - Add your own automations (you can use the one here for inspiration - for the battery powered one there are no events being fired, but a sensor will be created that returns the wake reason.).
@@ -45,4 +45,4 @@ __Non-Referral links:__
 ![](inside.jpg)
 
 ## Icons
-<a href="https://www.flaticon.com/authors/freepik" title="icons">Icons for keypad courtesy of Freepik on Flaticon</a>
+[Icons for keypad courtesy of Freepik on Flaticon](https://www.flaticon.com/authors/freepik)
