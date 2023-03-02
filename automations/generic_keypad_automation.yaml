@@ -1,0 +1,242 @@
+alias: Esp32_Keypad_automations
+description: Do stuff when the keypad buttons are pressed
+trigger:
+  - platform: event
+    event_type: esp32_keypad_b1
+    event_data:
+      title: single_click
+    id: Button_1
+  - platform: event
+    event_type: esp32_keypad_b1
+    event_data:
+      title: dbl_click
+    id: Button_1_dbl
+  - platform: event
+    event_type: esp32_keypad_b1
+    event_data:
+      title: triple_click
+    id: Button_1_triple
+
+  - platform: event
+    event_type: esp32_keypad_b2
+    event_data:
+      title: single_click
+    id: Button_2
+  - platform: event
+    event_type: esp32_keypad_b2
+    event_data:
+      title: dbl_click
+    id: Button_2_dbl
+  - platform: event
+    event_type: esp32_keypad_b2
+    event_data:
+      title: triple_click
+    id: Button_2_triple
+
+  - platform: event
+    event_type: esp32_keypad_b3
+    event_data:
+      title: single_click
+    id: Button_3
+  - platform: event
+    event_type: esp32_keypad_b3
+    event_data:
+      title: dbl_click
+    id: Button_3_dbl
+  - platform: event
+    event_type: esp32_keypad_b3
+    event_data:
+      title: triple_click
+    id: Button_3_triple
+
+  - platform: event
+    event_type: esp32_keypad_b4
+    event_data:
+      title: single_click
+    id: Button_4
+  - platform: event
+    event_type: esp32_keypad_b4
+    event_data:
+      title: dbl_click
+    id: Button_4_dbl
+  - platform: event
+    event_type: esp32_keypad_b4
+    event_data:
+      title: triple_click
+    id: Button_4_triple
+
+  - platform: event
+    event_type: esp32_keypad_b5
+    event_data:
+      title: single_click
+    id: Button_5
+  - platform: event
+    event_type: esp32_keypad_b5
+    event_data:
+      title: dbl_click
+    id: Button_5_dbl
+  - platform: event
+    event_type: esp32_keypad_b5
+    event_data:
+      title: triple_click
+    id: Button_5_triple
+
+  - platform: event
+    event_type: esp32_keypad_b6
+    event_data:
+      title: single_click
+    id: Button_6
+  - platform: event
+    event_type: esp32_keypad_b6
+    event_data:
+      title: dbl_click
+    id: Button_6_dbl
+  - platform: event
+    event_type: esp32_keypad_b6
+    event_data:
+      title: triple_click
+    id: Button_6_triple
+
+  - platform: event
+    event_type: esp32_keypad_b7
+    event_data:
+      title: single_click
+    id: Button_7
+  - platform: event
+    event_type: esp32_keypad_b7
+    event_data:
+      title: dbl_click
+    id: Button_7_dbl
+  - platform: event
+    event_type: esp32_keypad_b7
+    event_data:
+      title: triple_click
+    id: Button_7_triple
+
+  - platform: event
+    event_type: esp32_keypad_b8
+    event_data:
+      title: single_click
+    id: Button_8
+  - platform: event
+    event_type: esp32_keypad_b8
+    event_data:
+      title: dbl_click
+    id: Button_8_dbl
+  - platform: event
+    event_type: esp32_keypad_b8
+    event_data:
+      title: triple_click
+    id: Button_8_triple
+  
+condition: []
+action:
+  - choose:
+      - conditions:
+          - condition: trigger
+            id: Button_1
+        sequence: []
+      - conditions:
+          - condition: trigger
+            id: Button_1_dbl
+        sequence: []
+      - conditions:
+          - condition: trigger
+            id: Button_1_triple
+        sequence: []
+
+
+      - conditions:
+          - condition: trigger
+            id: Button_2
+        sequence: []
+      - conditions:
+          - condition: trigger
+            id: Button_2_dbl
+        sequence: []
+      - conditions:
+          - condition: trigger
+            id: Button_2_triple
+        sequence: []
+
+      - conditions:
+          - condition: trigger
+            id: Button_3
+        sequence: []
+      - conditions:
+          - condition: trigger
+            id: Button_3_dbl
+        sequence: []
+      - conditions:
+          - condition: trigger
+            id: Button_3_triple
+        sequence: []
+
+      - conditions:
+          - condition: trigger
+            id: Button_4
+        sequence: []
+      - conditions:
+          - condition: trigger
+            id: Button_4_dbl
+        sequence: []
+      - conditions:
+          - condition: trigger
+            id: Button_4_triple
+        sequence: []
+
+      - conditions:
+          - condition: trigger
+            id: Button_5
+        sequence: []
+      - conditions:
+          - condition: trigger
+            id: Button_5_dbl
+        sequence: []
+      - conditions:
+          - condition: trigger
+            id: Button_5_triple
+        sequence: []
+
+      - conditions:
+          - condition: trigger
+            id: Button_6
+        sequence: []
+      - conditions:
+          - condition: trigger
+            id: Button_6_dbl
+        sequence: []
+      - conditions:
+          - condition: trigger
+            id: Button_6_triple
+        sequence: []
+
+      - conditions:
+          - condition: trigger
+            id: Button_7
+        sequence: []
+      - conditions:
+          - condition: trigger
+            id: Button_7_dbl
+        sequence: []
+      - conditions:
+          - condition: trigger
+            id: Button_7_triple
+        sequence: []
+
+      - conditions:
+          - condition: trigger
+            id: Button_8
+        sequence: []
+      - conditions:
+          - condition: trigger
+            id: Button_8_dbl
+        sequence: []
+      - conditions:
+          - condition: trigger
+            id: Button_8_triple
+        sequence: []
+
+    enabled: true
+mode: parallel
+max: 10
