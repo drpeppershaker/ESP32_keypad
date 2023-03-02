@@ -25,7 +25,7 @@ wifi:
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
-    ssid: "Bb-Keypad-V2 Fallback Hotspot"
+    ssid: "esp32 Keypad Fallback Hotspot"
     password: !secret ssid_password
 
 captive_portal:
