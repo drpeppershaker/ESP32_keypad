@@ -42,6 +42,178 @@ captive_portal:
 #Button 7: GPI17 / 
 #Button 8: GPIO16 
 
+
+# Example configuration entry
+light:
+  # Example for light segment source
+  - platform: fastled_clockless
+    id: light1
+    name: keypad
+    chipset: WS2813
+    pin: GPIO33
+    num_leds: 8
+    rgb_order: GRB
+    default_transition_length: 0s
+    restore_mode: RESTORE_AND_ON
+    internal: True
+
+  - platform: partition
+    name: "Key 1"
+    id: key1
+    segments:
+      - id: light1
+        from: 0
+        to: 0
+    default_transition_length: 0s
+    
+  - platform: partition
+    name: "Key 2"
+    id: key2
+    segments:
+      - id: light1
+        from: 1
+        to: 1
+    default_transition_length: 0s
+
+  - platform: partition
+    name: "Key 3"
+    id: key3
+    segments:
+      - id: light1
+        from: 2
+        to: 2
+    default_transition_length: 0s
+
+  - platform: partition
+    name: "Key 4"
+    id: key4
+    segments:
+      - id: light1
+        from: 3
+        to: 3
+    default_transition_length: 0s
+      
+  - platform: partition
+    name: "Key 5"
+    id: key5
+    segments:
+      - id: light1
+        from: 4
+        to: 4
+    default_transition_length: 0s
+
+  - platform: partition
+    name: "Key 6"
+    id: key6
+    segments:
+      - id: light1
+        from: 5
+        to: 5
+    default_transition_length: 0s
+
+  - platform: partition
+    name: "Key 7"
+    id: key7
+    segments:
+      - id: light1
+        from: 6
+        to: 6
+    default_transition_length: 0s
+
+  - platform: partition
+    name: "Key 8"
+    id: key8
+    segments:
+      - id: light1
+        from: 7
+        to: 7
+    default_transition_length: 0s
+
+  - platform: partition
+    name: "Keypad"
+    id: keypad
+    default_transition_length: 0s
+    segments:
+      - id: light1
+        from: 0
+        to: 7
+    effects:
+      - pulse:
+      - pulse:
+          name: "Fast Pulse"
+          transition_length: 0.5s
+          update_interval: 0.5s
+      - pulse:
+          name: "Slow Pulse"
+          # transition_length: 1s      # defaults to 1s
+          update_interval: 2s
+      - pulse:
+          name: "Blink"
+          transition_length: .25s      # defaults to 1s
+          update_interval: .25s
+      - addressable_rainbow:
+      - addressable_rainbow:
+          name: Rainbow Skinny
+          speed: 10
+          width: 25
+      - addressable_scan:
+      - addressable_scan:
+          name: Scan Fast
+          move_interval: 50ms
+          scan_width: 1
+      - addressable_twinkle:
+      - addressable_random_twinkle:
+      - addressable_fireworks:
+          use_random_color: true
+      - addressable_flicker:
+
+
+
+
+# sensor:
+#   - platform: homeassistant
+#     id: key1_brightness
+#     entity_id: light.eps32_keypad_key1
+#     attribute: brightness
+#   - platform: homeassistant
+#     id: key2_brightness
+#     entity_id: light.eps32_keypad_key2
+#     attribute: brightness
+#   - platform: homeassistant
+#     id: key3_brightness
+#     entity_id: light.eps32_keypad_key3
+#     attribute: brightness
+#   - platform: homeassistant
+#     id: key4_brightness
+#     entity_id: light.eps32_keypad_key4
+#     attribute: brightness
+#   - platform: homeassistant
+#     id: key5_brightness
+#     entity_id: light.eps32_keypad_key5
+#     attribute: brightness
+#   - platform: homeassistant
+#     id: key6_brightness
+#     entity_id: light.eps32_keypad_key6
+#     attribute: brightness
+#   - platform: homeassistant
+#     id: key7_brightness
+#     entity_id: light.eps32_keypad_key7
+#     attribute: brightness
+#   - platform: homeassistant
+#     id: key8_brightness
+#     entity_id: light.eps32_keypad_key8
+#     attribute: brightness
+
+
+# text_sensor:
+#   - platform: homeassistant
+#     id: keypad_effect
+#     entity_id: light.eps32_keypad_keypad
+#     attribute: rgb_color
+
+
+
+
 binary_sensor:
   # Button 1
   - platform: gpio
@@ -53,6 +225,18 @@ binary_sensor:
         input: true
         pulldown: true #was pulldown
     id: esp32_keypad_b1
+    on_press:
+      then:
+        - light.turn_on:
+            id: key1
+            red: 1
+            green: 1
+            blue: 1
+    on_release:
+      then:
+        - light.turn_off:
+            id: key1
+
     on_multi_click:
     - timing:
       - ON for at most 1s
@@ -64,9 +248,10 @@ binary_sensor:
             format: "Double Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad_b1
+            event: esphome.esp32_keypad
             data:
               title: dbl_click
+              button: b1
     - timing:
       - ON for at most 1s
       - OFF for at most 1s
@@ -79,9 +264,10 @@ binary_sensor:
             format: "Triple Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad_b1
+            event: esphome.esp32_keypad
             data:
               title: triple_click
+              button: b1
     - timing:
       - ON for 1s to 2s
       - OFF for at least 0.5s
@@ -90,9 +276,10 @@ binary_sensor:
             format: "Single Long Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad_b1
+            event: esphome.esp32_keypad
             data:
               title: long_click
+              button: b1
     - timing:
       - ON for at least 2.2s
       then:
@@ -100,20 +287,25 @@ binary_sensor:
             format: "Click and Hold"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad_b1
+            event: esphome.esp32_keypad
             data:
               title: hold
+              button: b1
     - timing:
       - ON for at most 1s
       - OFF for at least 0.5s
       then:
+        # - light.turn_off:
+        #     id: light1
         - logger.log:
             format: "Single Short Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad_b1
+            event: esphome.esp32_keypad
             data:
               title: single_click
+              button: b1
+
   #Button 2
   - platform: gpio
     icon: "mdi:dialpad"
@@ -124,6 +316,17 @@ binary_sensor:
         input: true
         pulldown: true #was pulldown
     id: esp32_keypad_b2
+    on_press:
+      then:
+        - light.turn_on:
+            id: key2
+            red: 1
+            green: 1
+            blue: 1
+    on_release:
+      then:
+        - light.turn_off:
+            id: key2
     on_multi_click:
     - timing:
       - ON for at most 1s
@@ -135,9 +338,10 @@ binary_sensor:
             format: "Double Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad_b2
+            event: esphome.esp32_keypad
             data:
               title: dbl_click
+              button: b2
     - timing:
       - ON for at most 1s
       - OFF for at most 1s
@@ -150,9 +354,10 @@ binary_sensor:
             format: "Triple Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad_b2
+            event: esphome.esp32_keypad
             data:
               title: triple_click
+              button: b2
     - timing:
       - ON for 1s to 2s
       - OFF for at least 0.5s
@@ -161,9 +366,10 @@ binary_sensor:
             format: "Single Long Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad_b2
+            event: esphome.esp32_keypad
             data:
               title: long_click
+              button: b2
     - timing:
       - ON for at least 2.2s
       then:
@@ -171,9 +377,10 @@ binary_sensor:
             format: "Click and Hold"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad_b2
+            event: esphome.esp32_keypad
             data:
               title: hold
+              button: b2
     - timing:
       - ON for at most 1s
       - OFF for at least 0.5s
@@ -182,9 +389,10 @@ binary_sensor:
             format: "Single Short Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad_b2
+            event: esphome.esp32_keypad
             data:
               title: single_click
+              button: b2
   #Button 3
   - platform: gpio
     icon: "mdi:dialpad"
@@ -195,6 +403,17 @@ binary_sensor:
         input: true
         pulldown: true #was pulldown
     id: esp32_keypad_b3
+    on_press:
+      then:
+        - light.turn_on:
+            id: key3
+            red: 1
+            green: 1
+            blue: 1
+    on_release:
+      then:
+        - light.turn_off:
+            id: key3
     on_multi_click:
     - timing:
       - ON for at most 1s
@@ -206,9 +425,10 @@ binary_sensor:
             format: "Double Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad_b3
+            event: esphome.esp32_keypad
             data:
               title: dbl_click
+              button: b3
     - timing:
       - ON for at most 1s
       - OFF for at most 1s
@@ -221,9 +441,10 @@ binary_sensor:
             format: "Triple Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad_b3
+            event: esphome.esp32_keypad
             data:
               title: triple_click
+              button: b3
     - timing:
       - ON for 1s to 2s
       - OFF for at least 0.5s
@@ -232,9 +453,10 @@ binary_sensor:
             format: "Single Long Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad_b3
+            event: esphome.esp32_keypad
             data:
               title: long_click
+              button: b3
     - timing:
       - ON for at least 2.2s
       then:
@@ -242,9 +464,10 @@ binary_sensor:
             format: "Click and Hold"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad_b3
+            event: esphome.esp32_keypad
             data:
               title: hold
+              button: b3
     - timing:
       - ON for at most 1s
       - OFF for at least 0.5s
@@ -253,9 +476,10 @@ binary_sensor:
             format: "Single Short Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad_b3
+            event: esphome.esp32_keypad
             data:
               title: single_click
+              button: b3
   #Button 4
   - platform: gpio
     icon: "mdi:dialpad"
@@ -266,6 +490,17 @@ binary_sensor:
         input: true
         pulldown: true #was pulldown
     id: esp32_keypad_b4
+    on_press:
+      then:
+        - light.turn_on:
+            id: key4
+            red: 1
+            green: 1
+            blue: 1
+    on_release:
+      then:
+        - light.turn_off:
+            id: key4
     on_multi_click:
     - timing:
       - ON for at most 1s
@@ -277,9 +512,10 @@ binary_sensor:
             format: "Double Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad_b4
+            event: esphome.esp32_keypad
             data:
               title: dbl_click
+              button: b4
     - timing:
       - ON for at most 1s
       - OFF for at most 1s
@@ -292,9 +528,10 @@ binary_sensor:
             format: "Triple Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad_b4
+            event: esphome.esp32_keypad
             data:
               title: triple_click
+              button: b4
     - timing:
       - ON for 1s to 2s
       - OFF for at least 0.5s
@@ -303,9 +540,10 @@ binary_sensor:
             format: "Single Long Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad_b4
+            event: esphome.esp32_keypad
             data:
               title: long_click
+              button: b4
     - timing:
       - ON for at least 2.2s
       then:
@@ -313,9 +551,10 @@ binary_sensor:
             format: "Click and Hold"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad_b4
+            event: esphome.esp32_keypad
             data:
               title: hold
+              button: b4
     - timing:
       - ON for at most 1s
       - OFF for at least 0.5s
@@ -324,9 +563,10 @@ binary_sensor:
             format: "Single Short Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad_b4
+            event: esphome.esp32_keypad
             data:
               title: single_click
+              button: b4
     #Button 5
   - platform: gpio
     icon: "mdi:dialpad"
@@ -337,6 +577,17 @@ binary_sensor:
         input: true
         pulldown: true #was pulldown
     id: esp32_keypad_b5
+    on_press:
+     then:
+        - light.turn_on:
+            id: key5
+            red: 1
+            green: 1
+            blue: 1
+    on_release:
+      then:
+        - light.turn_off:
+            id: key5
     on_multi_click:
     - timing:
       - ON for at most 1s
@@ -348,9 +599,10 @@ binary_sensor:
             format: "Double Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad_b5
+            event: esphome.esp32_keypad
             data:
               title: dbl_click
+              button: b5
     - timing:
       - ON for at most 1s
       - OFF for at most 1s
@@ -363,9 +615,10 @@ binary_sensor:
             format: "Triple Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad_b5
+            event: esphome.esp32_keypad
             data:
               title: triple_click
+              button: b5
     - timing:
       - ON for 1s to 2s
       - OFF for at least 0.5s
@@ -374,9 +627,10 @@ binary_sensor:
             format: "Single Long Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad_b5
+            event: esphome.esp32_keypad
             data:
               title: long_click
+              button: b5
     - timing:
       - ON for at least 2.2s
       then:
@@ -384,9 +638,10 @@ binary_sensor:
             format: "Click and Hold"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad_b5
+            event: esphome.esp32_keypad
             data:
               title: hold
+              button: b5
     - timing:
       - ON for at most 1s
       - OFF for at least 0.5s
@@ -395,9 +650,10 @@ binary_sensor:
             format: "Single Short Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad_b5
+            event: esphome.esp32_keypad
             data:
               title: single_click
+              button: b5
     #Button 6
   - platform: gpio
     icon: "mdi:dialpad"
@@ -408,6 +664,17 @@ binary_sensor:
         input: true
         pulldown: true
     id: esp32_keypad_b6
+    on_press:
+     then:
+        - light.turn_on:
+            id: key6
+            red: 1
+            green: 1
+            blue: 1
+    on_release:
+      then:
+        - light.turn_off:
+            id: key6
     on_multi_click:
     - timing:
       - ON for at most 1s
@@ -419,9 +686,10 @@ binary_sensor:
             format: "Double Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad_b6
+            event: esphome.esp32_keypad
             data:
               title: dbl_click
+              button: b6
     - timing:
       - ON for at most 1s
       - OFF for at most 1s
@@ -434,9 +702,10 @@ binary_sensor:
             format: "Triple Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad_b6
+            event: esphome.esp32_keypad
             data:
               title: triple_click
+              button: b6
     - timing:
       - ON for 1s to 2s
       - OFF for at least 0.5s
@@ -445,9 +714,10 @@ binary_sensor:
             format: "Single Long Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad_b6
+            event: esphome.esp32_keypad
             data:
               title: long_click
+              button: b6
     - timing:
       - ON for at least 2.2s
       then:
@@ -455,9 +725,10 @@ binary_sensor:
             format: "Click and Hold"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad_b6
+            event: esphome.esp32_keypad
             data:
               title: hold
+              button: b6
     - timing:
       - ON for at most 1s
       - OFF for at least 0.5s
@@ -466,9 +737,10 @@ binary_sensor:
             format: "Single Short Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad_b6
+            event: esphome.esp32_keypad
             data:
               title: single_click
+              button: b6
     #Button 7
   - platform: gpio
     icon: "mdi:dialpad"
@@ -479,6 +751,17 @@ binary_sensor:
         input: true
         pulldown: true #was pulldown
     id: esp32_keypad_b7
+    on_press:
+     then:
+        - light.turn_on:
+            id: key7
+            red: 1
+            green: 1
+            blue: 1
+    on_release:
+      then:
+        - light.turn_off:
+            id: key7
     on_multi_click:
     - timing:
       - ON for at most 1s
@@ -490,9 +773,10 @@ binary_sensor:
             format: "Double Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad_b7
+            event: esphome.esp32_keypad
             data:
               title: dbl_click
+              button: b7
     - timing:
       - ON for at most 1s
       - OFF for at most 1s
@@ -505,9 +789,10 @@ binary_sensor:
             format: "Triple Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad_b7
+            event: esphome.esp32_keypad
             data:
               title: triple_click
+              button: b7
     - timing:
       - ON for 1s to 2s
       - OFF for at least 0.5s
@@ -516,9 +801,10 @@ binary_sensor:
             format: "Single Long Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad_b7
+            event: esphome.esp32_keypad
             data:
               title: long_click
+              button: b7
     - timing:
       - ON for at least 2.2s
       then:
@@ -526,9 +812,10 @@ binary_sensor:
             format: "Click and Hold"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad_b7
+            event: esphome.esp32_keypad
             data:
               title: hold
+              button: b7
     - timing:
       - ON for at most 1s
       - OFF for at least 0.5s
@@ -537,9 +824,10 @@ binary_sensor:
             format: "Single Short Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad_b7
+            event: esphome.esp32_keypad
             data:
               title: single_click
+              button: b7
     #Button 8
   - platform: gpio
     icon: "mdi:dialpad"
@@ -550,6 +838,17 @@ binary_sensor:
         input: true
         pulldown: true
     id: esp32_keypad_b8
+    on_press:
+      then:
+        - light.turn_on:
+            id: key8
+            red: 1
+            green: 1
+            blue: 1
+    on_release:
+      then:
+        - light.turn_off:
+            id: key8
     on_multi_click:
     - timing:
       - ON for at most 1s
@@ -561,9 +860,10 @@ binary_sensor:
             format: "Double Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad_b8
+            event: esphome.esp32_keypad
             data:
               title: dbl_click
+              button: b8
     - timing:
       - ON for at most 1s
       - OFF for at most 1s
@@ -576,9 +876,10 @@ binary_sensor:
             format: "Triple Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad_b8
+            event: esphome.esp32_keypad
             data:
               title: triple_click
+              button: b8
     - timing:
       - ON for 1s to 2s
       - OFF for at least 0.5s
@@ -587,9 +888,10 @@ binary_sensor:
             format: "Single Long Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad_b8
+            event: esphome.esp32_keypad
             data:
               title: long_click
+              button: b8
     - timing:
       - ON for at least 2.2s
       then:
@@ -597,9 +899,10 @@ binary_sensor:
             format: "Click and Hold"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad_b8
+            event: esphome.esp32_keypad
             data:
               title: hold
+              button: b8
     - timing:
       - ON for at most 1s
       - OFF for at least 0.5s
@@ -608,6 +911,7 @@ binary_sensor:
             format: "Single Short Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad_b8
+            event: esphome.esp32_keypad
             data:
               title: single_click
+              button: b8
