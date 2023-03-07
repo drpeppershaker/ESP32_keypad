@@ -16,24 +16,30 @@ All switches connected to common VIN.
 
 ## Parts
 __Referral links:__
-- [8 Cherry MX Blue Switches](https://amzn.to/3YT6VgA)
-- [a ESP32 board](https://amzn.to/41l7mCi)
-- [Blank Keycaps](https://amzn.to/3SmIaqX)
+- [8 Cherry MX Switches](https://amzn.to/3YT6VgA)
+  - I like the Blues, they're _very_ clicky
+- [an ESP32 board](https://amzn.to/41l7mCi)
+- [Relegendable Keycaps](https://amzn.to/3SmIaqX)
+- [Wire](https://amzn.to/3SCjDOE)
+  - I like the silicone wire because it's very flexible and easy to work with
 
 Note: if you choose to use the above referral links, I may receive a _very_ small commission from Amazon at no extra cost to you.<br>
 If you don't wish to use the referral links above, feel free to use the non-referral links below:
 
 __Non-Referral links:__
-- [8 Cherry MX Blue Switches](https://www.amazon.com/dp/B07KMXJ4KG)
-- [a ESP32 board](https://www.amazon.com/dp/B08DR31G4G)
-- [Blank Keycaps](https://www.amazon.com/dp/B01M023NFK)
-
+- [8 Cherry MX Switches](https://www.amazon.com/dp/B07KMXJ4KG)
+  - I like the Blues, they're _very_ clicky
+- [an ESP32 board](https://www.amazon.com/dp/B08DR31G4G)
+- [Relegendable Keycaps](https://www.amazon.com/dp/B01M023NFK)
+- [Wire](https://www.amazon.com/gp/product/B01KQ2JNLI)
+  - I like the silicone wire because it's very flexible and easy to work with
 
 ## Requirements
-- Home Assistant installation with ESPHome
+- [Home Assistant installation](https://www.home-assistant.io)
+- [ESPHome integration](https://www.home-assistant.io/integrations/esphome/)
 
 ## Case
-- I 3D printed my case. I've included two versions of the macropad case. The version I used is _really_ tight. If you don't want to put your soldering skills and smash and cram skills to the test, I also included a slightly taller version as well. I will note that I used a high gauge [flexible silicone wire](https://amzn.to/3SCjDOE) -  [(non affiliate link here)](https://www.amazon.com/gp/product/B01KQ2JNLI) to really help get things put into the case. Plus, you can actually strip the silicone wire with your fingernails, which makes it a lot easier to trim and adjust the length as needed.
+- I 3D printed my case. I've included two versions of the macropad case. The version I used is _really_ tight. If you don't want to put your soldering skills and smash and cram skills to the test, I also included a slightly taller version as well. I will note that I used a high gauge to really help get things put into the case. Plus, you can actually strip the silicone wire with your fingernails, which makes it a lot easier to trim and adjust the length as needed.
 
 
 ## Assembly
