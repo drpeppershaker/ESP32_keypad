@@ -4,7 +4,8 @@ inspired by:
 - https://github.com/sfgabe/OITProjects/tree/master/Baby_Buddy_Keypad 
 - https://github.com/jeroenterheerdt/Baby-Buddy-Keypad. 
 
-This DIY macropad uses an ESP32 with [ESPHome](https://esphome.io/), has 8 keys, and supports single, double, and triple clicks, long clicks, and click and holds.<br>
+This DIY macropad uses an ESP32 with [ESPHome](https://esphome.io/).<br>
+It has 8 keys, and supports single, double, and triple clicks, long clicks, and click and holds.
 
 
 ## Images
