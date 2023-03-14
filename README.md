@@ -24,7 +24,7 @@ __Referral links:__
 - [an ESP32 board](https://amzn.to/41l7mCi)
 - [Relegendable Keycaps](https://amzn.to/3SmIaqX)
 - [Silicone Wire](https://amzn.to/405DW9x)
-  - 22awg or 24awg is what I would pick. 22awg is standard size for GPIO pins, but it's a little bit thick. 
+  - 22awg or 24awg is what I would pick. 22awg is standard size for GPIO pins, but it's less flexible than the 24awg. Your call here. 
   - The silicone wire for the switches is nice because it's super flexible and is easy to strip when when it's really short.
 - [Solid Core Wire](https://amzn.to/3lhCEd2)
   - Solid core wire for wiring up the LED pixels. If you look at my images, I actually used the legs from some resistors, and some spare header pins.
@@ -39,7 +39,7 @@ __Non-Referral links:__
 - [an ESP32 board](https://www.amazon.com/dp/B08DR31G4G)
 - [Relegendable Keycaps](https://www.amazon.com/dp/B01M023NFK)
 - [Silicone Wire](https://www.amazon.com/gp/product/B01LH1FR6M)
-  - 22awg or 24awg is what I would pick. 22awg is standard size for GPIO pins, but it's a little bit thick. 
+  - 22awg or 24awg is what I would pick. 22awg is standard size for GPIO pins, but it's a less flexible than the 24awg. Your call here.
   - The silicone wire for the switches is nice because it's super flexible and is easy to strip when when it's really short.
 - [Solid Core Wire](https://www.amazon.com/gp/product/B09BFFJRST)
   - Solid core wire for wiring up the LED pixels. If you look at my images, I actually used the legs from some resistors, and some spare header pins.
