@@ -23,8 +23,12 @@ __Referral links:__
   - I like the Blues, they're _very_ clicky
 - [an ESP32 board](https://amzn.to/41l7mCi)
 - [Relegendable Keycaps](https://amzn.to/3SmIaqX)
-- [Wire](https://amzn.to/3SCjDOE)
-  - I like the silicone wire because it's very flexible and easy to work with
+- [Silicone Wire](https://amzn.to/405DW9x)
+  - 22awg or 24awg is what I would pick. 22awg is standard size for GPIO pins, but it's a little bit thick. 
+  - The silicone wire for the switches is nice because it's super flexible and is easy to strip when when it's really short.
+- [Solid Core Wire](https://amzn.to/3lhCEd2)
+  - Solid core wire for wiring up the LED pixels. If you look at my images, I actually used the legs from some resistors, and some spare header pins.
+  - If I were doing it again, I would use solid core wire to make life easier when wiring up the LEDs.
 
 Note: if you choose to use the above referral links, I may receive a _very_ small commission from Amazon at no extra cost to you.<br>
 If you don't wish to use the referral links above, feel free to use the non-referral links below:
@@ -34,8 +38,12 @@ __Non-Referral links:__
   - I like the Blues, they're _very_ clicky
 - [an ESP32 board](https://www.amazon.com/dp/B08DR31G4G)
 - [Relegendable Keycaps](https://www.amazon.com/dp/B01M023NFK)
-- [Wire](https://www.amazon.com/gp/product/B01KQ2JNLI)
-  - I like the silicone wire because it's very flexible and easy to work with
+- [Silicone Wire](https://www.amazon.com/gp/product/B01LH1FR6M)
+  - 22awg or 24awg is what I would pick. 22awg is standard size for GPIO pins, but it's a little bit thick. 
+  - The silicone wire for the switches is nice because it's super flexible and is easy to strip when when it's really short.
+- [Solid Core Wire](https://www.amazon.com/gp/product/B09BFFJRST)
+  - Solid core wire for wiring up the LED pixels. If you look at my images, I actually used the legs from some resistors, and some spare header pins.
+  - If I were doing it again, I would use solid core wire to make life easier when wiring up the LEDs.
 
 ## Requirements
 - [Home Assistant installation](https://www.home-assistant.io)
@@ -43,10 +51,11 @@ __Non-Referral links:__
 
 ## Case
 - I 3D printed my case. I've included two versions of the macropad case. The version I used is _really_ tight. If you don't want to put your soldering skills and smash and cram skills to the test, I also included a slightly taller version as well. I will note that I used a high gauge to really help get things put into the case. Plus, you can actually strip the silicone wire with your fingernails, which makes it a lot easier to trim and adjust the length as needed.
+- If you choose to print the V2 version there are cutouts for the LED Pixels. Keep the pixels together in strips of 8. That way you can have one strip of 8 pixels running one direction and have the second row flipped for easier wiring.
 
 
 ## Assembly
-- all switches are connected to VIN and to their respective GPIOs (see ESPHome YAML files)
+- all switches are now connected to common GND and to their respective GPIOs (see ESPHome YAML files)
 -- Note, your GPIO pins may be different based on the version of the board you use.
 ![](/assets/V2/wiring_diagram_V2.png)
 
@@ -54,7 +63,7 @@ __Non-Referral links:__
 - Add your ESP device to Home Assistant once detected
 - Install esp32_keypad.yaml
 - Add your own automations (you can use the one here for inspiration). 
-  - Note: this version uses events rather than binary sensors for recording clicks. I'm looking into whether binary sensors might be a better solution...
+  - Note: this version uses events rather than binary sensors for recording clicks.
 
 
 
