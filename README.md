@@ -1,4 +1,4 @@
-# ESP32_keypad
+# ESP32_keypad V2
 
 inspired by: 
 - https://github.com/sfgabe/OITProjects/tree/master/Baby_Buddy_Keypad 
