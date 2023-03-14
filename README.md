@@ -9,10 +9,10 @@ It has 8 keys, and supports single, double, and triple clicks, long clicks, and 
 
 
 ## Images
-![](/assets/top.JPG)
+![](/assets/V2/top_V2.JPG)
 Please ignore the poor print quality, haven't had time to recalibrate the printer with the baby here!
 
-![](/assets/inside.JPG)
+![](/assets/V2/inside_V2.JPG)
 All switches connected to common VIN.
 
 ## Parts
@@ -46,7 +46,7 @@ __Non-Referral links:__
 ## Assembly
 - all switches are connected to VIN and to their respective GPIOs (see ESPHome YAML files)
 -- Note, your GPIO pins may be different based on the version of the board you use.
-![](/assets/wiring_diagram.png)
+![](/assets/V2/wiring_diagram_V2.png)
 
 ## Programming
 - Add your ESP device to Home Assistant once detected
