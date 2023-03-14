@@ -7,13 +7,15 @@ inspired by:
 This DIY macropad uses an ESP32 with [ESPHome](https://esphome.io/).<br>
 It has 8 keys, and supports single, double, and triple clicks, long clicks, and click and holds.
 
+Version 1 does not have LEDs, Version 2 uses 16 addressable LEDs to give an 8 pixel backlight and an individually addressable light for each keypress.
+
 
 ## Images
-![](/assets/V2/top_V2.JPG)
+![](/assets/V2/RGB_Lighting_Demo.gif)
 Please ignore the poor print quality, haven't had time to recalibrate the printer with the baby here!
 
-![](/assets/V2/inside_V2.JPG)
-All switches connected to common VIN.
+![](/assets/V2/Inside_V2.JPG)
+All switches now connected to common GND.
 
 ## Parts
 __Referral links:__
