@@ -18,32 +18,14 @@ Please ignore the poor print quality, haven't had time to recalibrate the printe
 All switches now connected to common GND.
 
 ## Parts
-__Referral links:__
-- [8 Cherry MX Switches](https://amzn.to/3YT6VgA)
-  - I like the Blues, they're _very_ clicky
-- [an ESP32 board](https://amzn.to/41l7mCi)
-- [Relegendable Keycaps](https://amzn.to/3SmIaqX)
-- [Silicone Wire](https://amzn.to/405DW9x)
-  - 22awg or 24awg is what I would pick. 22awg is standard size for GPIO pins, but it's less flexible than the 24awg. Your call here. 
-  - The silicone wire for the switches is nice because it's super flexible and is easy to strip when when it's really short.
-- [Solid Core Wire](https://amzn.to/3lhCEd2)
-  - Solid core wire for wiring up the LED pixels. If you look at my images, I actually used the legs from some resistors, and some spare header pins.
-  - If I were doing it again, I would use solid core wire to make life easier when wiring up the LEDs.
-
-Note: if you choose to use the above referral links, I may receive a _very_ small commission from Amazon at no extra cost to you.<br>
-If you don't wish to use the referral links above, feel free to use the non-referral links below:
-
-__Non-Referral links:__
-- [8 Cherry MX Switches](https://www.amazon.com/dp/B07KMXJ4KG)
-  - I like the Blues, they're _very_ clicky
-- [an ESP32 board](https://www.amazon.com/dp/B08DR31G4G)
-- [Relegendable Keycaps](https://www.amazon.com/dp/B01M023NFK)
-- [Silicone Wire](https://www.amazon.com/gp/product/B01LH1FR6M)
-  - 22awg or 24awg is what I would pick. 22awg is standard size for GPIO pins, but it's a less flexible than the 24awg. Your call here.
-  - The silicone wire for the switches is nice because it's super flexible and is easy to strip when when it's really short.
-- [Solid Core Wire](https://www.amazon.com/gp/product/B09BFFJRST)
-  - Solid core wire for wiring up the LED pixels. If you look at my images, I actually used the legs from some resistors, and some spare header pins.
-  - If I were doing it again, I would use solid core wire to make life easier when wiring up the LEDs.
+| **Parts**            | **Referral Link**       | **Non-Referral Link**                | **Notes**                                                                                                                                                                                                               |
+|----------------------|-------------------------|--------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8 Cherry MX Switches | https://amzn.to/3YT6VgA | https://www.amazon.com/dp/B07KMXJ4KG | I like the Blue switches because  they're *very* click-y                                                                                                                                                                |
+| an ESP32 board       | https://amzn.to/41l7mCi | https://www.amazon.com/dp/B08DR31G4G | These are to the cheapest ESP32 boards I could find on Amazon.  Use whatever boards you like                                                                                                                            |
+| Relegendable Keycaps | https://amzn.to/3SmIaqX | https://www.amazon.com/dp/B01M023NFK | Originally I went with the grey keycaps, but switched to the  translucent keycaps when I put the LEDs in.                                                                                                               |
+| Silicone Wire        | https://amzn.to/405DW9x | https://www.amazon.com/dp/B01LH1FR6M | Silicone wire is helpful for wiring the switches to the board.  They're extra flexible, which helps with the smash and cram at the end.                                                                                 |
+| Solid Core Wire      | https://amzn.to/3lhCEd2 | https://www.amazon.com/dp/B09BFFJRST | Solid core wire is practically a requirement to wire up the LED Pixels.  In my prototype I used the legs from a few resistors, and some header  pins. It was a *PAIN* to wire that way. Go with some solid core wire... |
+| Addressable LEDs     | https://amzn.to/3yH5whK | https://www.amazon.com/dp/B01DC0J0WS | I used these pixels because all the LED strips I have are low density.  I really wanted to cram two LEDs behind each key switch, and this seems  like the simplest way to achieve that.                                 |
 
 ## Requirements
 - [Home Assistant installation](https://www.home-assistant.io)
