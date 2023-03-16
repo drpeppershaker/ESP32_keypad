@@ -2,240 +2,499 @@ alias: Esp32_Keypad_automations
 description: Do stuff when the keypad buttons are pressed
 trigger:
   - platform: event
-    event_type: esp32_keypad_b1
+    event_type: esphome.esp32_keypad
+    id: Button_1_single
     event_data:
       title: single_click
-    id: Button_1
+      button: b1
+    alias: Button 1 Single Click
   - platform: event
-    event_type: esp32_keypad_b1
+    event_type: esphome.esp32_keypad
+    event_data:
+      title: single_click
+      button: b2
+    id: Button_2_single
+    alias: Button 2 Single Click
+  - platform: event
+    event_type: esphome.esp32_keypad
+    event_data:
+      title: single_click
+      button: b3
+    id: Button_3_single
+    alias: Button 3 Single Click
+  - platform: event
+    event_type: esphome.esp32_keypad
+    event_data:
+      title: single_click
+      button: b4
+    id: Button_4_single
+    alias: Button 4 Single Click
+  - platform: event
+    event_type: esphome.esp32_keypad
+    event_data:
+      title: single_click
+      button: b5
+    id: Button_5_single
+    alias: Button 5 Single Click
+  - platform: event
+    event_type: esphome.esp32_keypad
+    event_data:
+      title: single_click
+      button: b6
+    id: Button_6_single
+    alias: Button 6 Single Click
+  - platform: event
+    event_type: esphome.esp32_keypad
+    event_data:
+      title: single_click
+      button: b7
+    id: Button_7_single
+    alias: Button 7 Single Click
+  - platform: event
+    event_type: esphome.esp32_keypad
+    event_data:
+      title: single_click
+      button: b8
+    id: Button_8_single
+    alias: Button 8 Single Click
+
+  - platform: event
+    event_type: esphome.esp32_keypad
     event_data:
       title: dbl_click
-    id: Button_1_dbl
+      button: b1
+    id: Button_1_double
+    alias: Button 1 Double Click
   - platform: event
-    event_type: esp32_keypad_b1
+    event_type: esphome.esp32_keypad
+    event_data:
+      title: dbl_click
+      button: b2
+    id: Button_2_double
+    alias: Button 2 Double Click
+  - platform: event
+    event_type: esphome.esp32_keypad
+    event_data:
+      title: dbl_click
+      button: b3
+    id: Button_3_double
+    alias: Button 3 Double Click
+  - platform: event
+    event_type: esphome.esp32_keypad
+    event_data:
+      title: dbl_click
+      button: b4
+    id: Button_4_double
+    alias: Button 4 Double Click
+  - platform: event
+    event_type: esphome.esp32_keypad
+    event_data:
+      title: dbl_click
+      button: b5
+    id: Button_5_double
+    alias: Button 5 Double Click
+  - platform: event
+    event_type: esphome.esp32_keypad
+    event_data:
+      title: dbl_click
+      button: b6
+    id: Button_6_double
+    alias: Button 6 Double Click
+  - platform: event
+    event_type: esphome.esp32_keypad
+    event_data:
+      title: dbl_click
+      button: b7
+    id: Button_7_double
+    alias: Button 7 Double Click
+  - platform: event
+    event_type: esphome.esp32_keypad
+    event_data:
+      title: dbl_click
+      button: b8
+    id: Button_8_double
+    alias: Button 8 Double Click
+  - platform: event
+    event_type: esphome.esp32_keypad
     event_data:
       title: triple_click
+      button: b1
     id: Button_1_triple
-
+    alias: Button 1 Triple Click
   - platform: event
-    event_type: esp32_keypad_b2
-    event_data:
-      title: single_click
-    id: Button_2
-  - platform: event
-    event_type: esp32_keypad_b2
-    event_data:
-      title: dbl_click
-    id: Button_2_dbl
-  - platform: event
-    event_type: esp32_keypad_b2
+    event_type: esphome.esp32_keypad
     event_data:
       title: triple_click
+      button: b2
     id: Button_2_triple
-
+    alias: Button 2 Triple Click
   - platform: event
-    event_type: esp32_keypad_b3
-    event_data:
-      title: single_click
-    id: Button_3
-  - platform: event
-    event_type: esp32_keypad_b3
-    event_data:
-      title: dbl_click
-    id: Button_3_dbl
-  - platform: event
-    event_type: esp32_keypad_b3
+    event_type: esphome.esp32_keypad
     event_data:
       title: triple_click
+      button: b3
     id: Button_3_triple
-
+    alias: Button 3 Triple Click
   - platform: event
-    event_type: esp32_keypad_b4
-    event_data:
-      title: single_click
-    id: Button_4
-  - platform: event
-    event_type: esp32_keypad_b4
-    event_data:
-      title: dbl_click
-    id: Button_4_dbl
-  - platform: event
-    event_type: esp32_keypad_b4
+    event_type: esphome.esp32_keypad
     event_data:
       title: triple_click
+      button: b4
     id: Button_4_triple
-
+    alias: Button 4 Triple Click
   - platform: event
-    event_type: esp32_keypad_b5
-    event_data:
-      title: single_click
-    id: Button_5
-  - platform: event
-    event_type: esp32_keypad_b5
-    event_data:
-      title: dbl_click
-    id: Button_5_dbl
-  - platform: event
-    event_type: esp32_keypad_b5
+    event_type: esphome.esp32_keypad
     event_data:
       title: triple_click
+      button: b5
     id: Button_5_triple
-
+    alias: Button 5 Triple Click
   - platform: event
-    event_type: esp32_keypad_b6
-    event_data:
-      title: single_click
-    id: Button_6
-  - platform: event
-    event_type: esp32_keypad_b6
-    event_data:
-      title: dbl_click
-    id: Button_6_dbl
-  - platform: event
-    event_type: esp32_keypad_b6
+    event_type: esphome.esp32_keypad
     event_data:
       title: triple_click
+      button: b6
     id: Button_6_triple
-
+    alias: Button 6 Triple Click
   - platform: event
-    event_type: esp32_keypad_b7
-    event_data:
-      title: single_click
-    id: Button_7
-  - platform: event
-    event_type: esp32_keypad_b7
-    event_data:
-      title: dbl_click
-    id: Button_7_dbl
-  - platform: event
-    event_type: esp32_keypad_b7
+    event_type: esphome.esp32_keypad
     event_data:
       title: triple_click
+      button: b7
     id: Button_7_triple
-
+    alias: Button 7 Triple Click
   - platform: event
-    event_type: esp32_keypad_b8
-    event_data:
-      title: single_click
-    id: Button_8
-  - platform: event
-    event_type: esp32_keypad_b8
-    event_data:
-      title: dbl_click
-    id: Button_8_dbl
-  - platform: event
-    event_type: esp32_keypad_b8
+    event_type: esphome.esp32_keypad
     event_data:
       title: triple_click
+      button: b8
     id: Button_8_triple
-  
+    alias: Button 8 Triple Click
+
+  - platform: event
+    event_type: esphome.esp32_keypad
+    event_data:
+      title: long_click
+      button: b1
+    id: Button_1_long
+    alias: Button 1 Long Click
+  - platform: event
+    event_type: esphome.esp32_keypad
+    event_data:
+      title: long_click
+      button: b2
+    id: Button_2_long
+    alias: Button 2 Long Click
+  - platform: event
+    event_type: esphome.esp32_keypad
+    event_data:
+      title: long_click
+      button: b3
+    id: Button_3_long
+    alias: Button 3 Long Click
+  - platform: event
+    event_type: esphome.esp32_keypad
+    event_data:
+      title: long_click
+      button: b4
+    id: Button_4_long
+    alias: Button 4 Long Click
+  - platform: event
+    event_type: esphome.esp32_keypad
+    event_data:
+      title: long_click
+      button: b5
+    id: Button_5_long
+    alias: Button 5 Long Click
+  - platform: event
+    event_type: esphome.esp32_keypad
+    event_data:
+      title: long_click
+      button: b6
+    id: Button_6_long
+    alias: Button 6 Long Click
+  - platform: event
+    event_type: esphome.esp32_keypad
+    event_data:
+      title: long_click
+      button: b7
+    id: Button_7_long
+    alias: Button 7 Long Click
+  - platform: event
+    event_type: esphome.esp32_keypad
+    event_data:
+      title: long_click
+      button: b8
+    id: Button_8_long
+    alias: Button 8 Long Click
+  - platform: event
+    event_type: esphome.esp32_keypad
+    event_data:
+      title: hold
+      button: b1
+    id: Button_1_hold
+    alias: Button 1 Hold
+  - platform: event
+    event_type: esphome.esp32_keypad
+    event_data:
+      title: hold
+      button: b2
+    id: Button_2_hold
+    alias: Button 2 Hold
+  - platform: event
+    event_type: esphome.esp32_keypad
+    event_data:
+      title: hold
+      button: b3
+    id: Button_3_hold
+    alias: Button 3 Hold
+  - platform: event
+    event_type: esphome.esp32_keypad
+    event_data:
+      title: hold
+      button: b4
+    id: Button_4_hold
+    alias: Button 4 Hold
+  - platform: event
+    event_type: esphome.esp32_keypad
+    event_data:
+      title: hold
+      button: b5
+    id: Button_5_hold
+    alias: Button 5 Hold
+  - platform: event
+    event_type: esphome.esp32_keypad
+    event_data:
+      title: hold
+      button: b6
+    id: Button_6_hold
+    alias: Button 6 Hold
+  - platform: event
+    event_type: esphome.esp32_keypad
+    event_data:
+      title: hold
+      button: b7
+    id: Button_7_hold
+    alias: Button 7 Hold
+  - platform: event
+    event_type: esphome.esp32_keypad
+    event_data:
+      title: hold
+      button: b8
+    id: Button_8_hold
+    alias: Button 8 Hold
+    
 condition: []
 action:
   - choose:
       - conditions:
           - condition: trigger
-            id: Button_1
+            id: Button_1_single
+            alias: Button 1 Single Click
         sequence: []
       - conditions:
           - condition: trigger
             id: Button_1_dbl
+            alias: Button 1 Double Click
         sequence: []
       - conditions:
           - condition: trigger
             id: Button_1_triple
+            alias: Button 1 Triple Click
         sequence: []
-
+      - conditions:
+          - condition: trigger
+            id: Button_1_long
+            alias: Button 1 Long Click
+        sequence: []
+      - conditions:
+          - condition: trigger
+            id: Button_1_hold
+            alias: Button 1 Hold
+        sequence: []
 
       - conditions:
           - condition: trigger
-            id: Button_2
+            id: Button_2_single
+            alias: Button 2 Single Click
         sequence: []
       - conditions:
           - condition: trigger
             id: Button_2_dbl
+            alias: Button 2 Double Click
         sequence: []
       - conditions:
           - condition: trigger
             id: Button_2_triple
+            alias: Button 2 Triple Click
+        sequence: []
+      - conditions:
+          - condition: trigger
+            id: Button_2_long
+            alias: Button 2 Long Click
+        sequence: []
+      - conditions:
+          - condition: trigger
+            id: Button_2_hold
+            alias: Button 2 Hold
         sequence: []
 
       - conditions:
           - condition: trigger
-            id: Button_3
+            id: Button_3_single
+            alias: Button 3 Single Click
         sequence: []
       - conditions:
           - condition: trigger
             id: Button_3_dbl
+            alias: Button 3 Double Click
         sequence: []
       - conditions:
           - condition: trigger
             id: Button_3_triple
+            alias: Button 3 Triple Click
+        sequence: []
+      - conditions:
+          - condition: trigger
+            id: Button_3_long
+            alias: Button 3 Long Click
+        sequence: []
+      - conditions:
+          - condition: trigger
+            id: Button_3_hold
+            alias: Button 3 Hold
         sequence: []
 
       - conditions:
           - condition: trigger
-            id: Button_4
+            id: Button_4_single
+            alias: Button 4 Single Click
         sequence: []
       - conditions:
           - condition: trigger
             id: Button_4_dbl
+            alias: Button 4 Double Click
         sequence: []
       - conditions:
           - condition: trigger
             id: Button_4_triple
+            alias: Button 4 Triple Click
+        sequence: []
+      - conditions:
+          - condition: trigger
+            id: Button_4_long
+            alias: Button 4 Long Click
+        sequence: []
+      - conditions:
+          - condition: trigger
+            id: Button_4_hold
+            alias: Button 4 Hold
         sequence: []
 
       - conditions:
           - condition: trigger
-            id: Button_5
+            id: Button_5_single
+            alias: Button 5 Single Click
         sequence: []
       - conditions:
           - condition: trigger
             id: Button_5_dbl
+            alias: Button 5 Double Click
         sequence: []
       - conditions:
           - condition: trigger
             id: Button_5_triple
+            alias: Button 5 Triple Click
+        sequence: []
+      - conditions:
+          - condition: trigger
+            id: Button_5_long
+            alias: Button 5 Long Click
+        sequence: []
+      - conditions:
+          - condition: trigger
+            id: Button_5_hold
+            alias: Button 5 Hold
         sequence: []
 
       - conditions:
           - condition: trigger
-            id: Button_6
+            id: Button_6_single
+            alias: Button 6 Single Click
         sequence: []
       - conditions:
           - condition: trigger
             id: Button_6_dbl
+            alias: Button 6 Double Click
         sequence: []
       - conditions:
           - condition: trigger
             id: Button_6_triple
+            alias: Button 6 Triple Click
+        sequence: []
+      - conditions:
+          - condition: trigger
+            id: Button_6_long
+            alias: Button 6 Long Click
+        sequence: []
+      - conditions:
+          - condition: trigger
+            id: Button_6_hold
+            alias: Button 6 Hold
         sequence: []
 
       - conditions:
           - condition: trigger
-            id: Button_7
+            id: Button_7_single
+            alias: Button 7 Single Click
         sequence: []
       - conditions:
           - condition: trigger
             id: Button_7_dbl
+            alias: Button 7 Double Click
         sequence: []
       - conditions:
           - condition: trigger
             id: Button_7_triple
+            alias: Button 7 Triple Click
         sequence: []
-
       - conditions:
           - condition: trigger
-            id: Button_8
+            id: Button_7_long
+            alias: Button 7 Long Click
+        sequence: []
+      - conditions:
+          - condition: trigger
+            id: Button_7_hold
+            alias: Button 7 Hold
+        sequence: []
+        
+      - conditions:
+          - condition: trigger
+            id: Button_8_single
+            alias: Button 8 Single Click
         sequence: []
       - conditions:
           - condition: trigger
             id: Button_8_dbl
+            alias: Button 8 Double Click
         sequence: []
       - conditions:
           - condition: trigger
             id: Button_8_triple
+            alias: Button 8 Triple Click
         sequence: []
+      - conditions:
+          - condition: trigger
+            id: Button_8_long
+            alias: Button 8 Long Click
+        sequence: []
+      - conditions:
+          - condition: trigger
+            id: Button_8_hold
+            alias: Button 8 Hold
+        sequence: []
+
 
     enabled: true
 mode: parallel

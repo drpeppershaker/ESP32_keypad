@@ -1,55 +1,65 @@
-alias: Esp32_Keypad_automations
+alias: Baby Buddy Keypad V2
 description: Do stuff when the keypad buttons are pressed
 trigger:
   - platform: event
-    event_type: esp32_keypad_b1
-    event_data:
-      title: single_click
+    event_type: esphome.esp32_keypad
     id: Button_1
-  - platform: event
-    event_type: esp32_keypad_b2
     event_data:
       title: single_click
+      button: b1
+  - platform: event
+    event_type: esphome.esp32_keypad
+    event_data:
+      title: single_click
+      button: b2
     id: Button_2
   - platform: event
-    event_type: esp32_keypad_b3
+    event_type: esphome.esp32_keypad
     event_data:
       title: single_click
+      button: b3
     id: Button_3
   - platform: event
-    event_type: esp32_keypad_b4
+    event_type: esphome.esp32_keypad
     event_data:
       title: single_click
+      button: b4
     id: Button_4
   - platform: event
-    event_type: esp32_keypad_b4
+    event_type: esphome.esp32_keypad
     event_data:
       title: dbl_click
+      button: b4
     id: Diaper_double_click
   - platform: event
-    event_type: esp32_keypad_b4
+    event_type: esphome.esp32_keypad
     event_data:
       title: triple_click
+      button: b4
     id: Diaper_triple_click
   - platform: event
-    event_type: esp32_keypad_b5
+    event_type: esphome.esp32_keypad
     event_data:
       title: single_click
+      button: b5
     id: Button_5
   - platform: event
-    event_type: esp32_keypad_b6
+    event_type: esphome.esp32_keypad
     event_data:
       title: single_click
+      button: b6
     id: Button_6
   - platform: event
-    event_type: esp32_keypad_b7
+    event_type: esphome.esp32_keypad
     event_data:
       title: single_click
+      button: b7
     id: Button_7
   - platform: event
-    event_type: esp32_keypad_b8
+    event_type: esphome.esp32_keypad
     event_data:
       title: single_click
+      button: b8
     id: Button_8
 condition: []
 action:
@@ -60,7 +70,7 @@ action:
         sequence:
           - if:
               - condition: template
-                value_template: "{{state_attr('sensor.FIRSTNAME_LASTNAME_last_timer', 'active')}}"
+                value_template: "{{state_attr('sensor.$BABY_$NAME_last_timer', 'active')}}"
             then:
               - service: babybuddy.add_feeding
                 data:
@@ -68,7 +78,7 @@ action:
                   type: Breast milk
                   method: Left breast
                 target:
-                  entity_id: switch.FIRSTNAME_LASTNAME_timer
+                  entity_id: switch.$BABY_$NAME_timer
               - service: notify.all_phones
                 data:
                   title: Baby Buddy
@@ -76,8 +86,8 @@ action:
                     Left Breast Logged Duration: {{
                     states.sensor.bb_timer_formatted.state }}
                   data:
-                    clickAction: http://YOUR.BB.IP.ADDRESS:8000/feedings/
-                    url: http://YOUR.BB.IP.ADDRESS:8000/feedings/
+                    clickAction: $YOUR.BB.URL:8000/feedings/
+                    url: $YOUR.BB.URL:8000/feedings/
                     persistent: true
                     title: Baby Buddy
               - service: input_text.set_value
@@ -98,15 +108,15 @@ action:
               - service: switch.turn_on
                 data: {}
                 target:
-                  entity_id: switch.FIRSTNAME_LASTNAME_timer
+                  entity_id: switch.$BABY_$NAME_timer
               - service: notify.all_phones
                 data:
                   title: Baby Buddy
                   message: |
                     Left Breast Timer Started
                   data:
-                    clickAction: http://YOUR.BB.IP.ADDRESS:8000/timers/
-                    url: http://YOUR.BB.IP.ADDRESS:8000/timers/
+                    clickAction: $YOUR.BB.URL:8000/timers/
+                    url: $YOUR.BB.URL:8000/timers/
                     persistent: true
                     title: Baby Buddy
       - conditions:
@@ -115,7 +125,7 @@ action:
         sequence:
           - if:
               - condition: template
-                value_template: "{{state_attr('sensor.FIRSTNAME_LASTNAME_last_timer', 'active')}}"
+                value_template: "{{state_attr('sensor.$BABY_$NAME_last_timer', 'active')}}"
             then:
               - service: babybuddy.add_feeding
                 data:
@@ -123,7 +133,7 @@ action:
                   type: Breast milk
                   method: Right breast
                 target:
-                  entity_id: switch.FIRSTNAME_LASTNAME_timer
+                  entity_id: switch.$BABY_$NAME_timer
               - service: notify.all_phones
                 data:
                   title: Baby Buddy
@@ -131,8 +141,8 @@ action:
                     Right Breast Logged Duration: {{
                     states.sensor.bb_timer_formatted.state }}
                   data:
-                    clickAction: http://YOUR.BB.IP.ADDRESS:8000/feedings/
-                    url: http://YOUR.BB.IP.ADDRESS:8000/feedings/
+                    clickAction: $YOUR.BB.URL:8000/feedings/
+                    url: $YOUR.BB.URL:8000/feedings/
                     persistent: true
                     title: Baby Buddy
               - service: input_text.set_value
@@ -153,14 +163,14 @@ action:
               - service: switch.turn_on
                 data: {}
                 target:
-                  entity_id: switch.FIRSTNAME_LASTNAME_timer
+                  entity_id: switch.$BABY_$NAME_timer
               - service: notify.all_phones
                 data:
                   title: Baby Buddy
                   message: Right Breast Timer Started
                   data:
-                    clickAction: http://YOUR.BB.IP.ADDRESS:8000/timers/
-                    url: http://YOUR.BB.IP.ADDRESS:8000/timers/
+                    clickAction: $YOUR.BB.URL:8000/timers/
+                    url: $YOUR.BB.URL:8000/timers/
                     persistent: true
                     title: Baby Buddy
       - conditions:
@@ -172,7 +182,7 @@ action:
               type: Wet
               color: Yellow
             target:
-              entity_id: sensor.baby_FIRSTNAME_LASTNAME
+              entity_id: sensor.baby_$BABY_$NAME
           - service: counter.increment
             data: {}
             target:
@@ -183,8 +193,8 @@ action:
               message: |
                 Wet Diaper Logged!
               data:
-                clickAction: http://YOUR.BB.IP.ADDRESS:8000/diapers/
-                url: http://YOUR.BB.IP.ADDRESS:8000/diapers/
+                clickAction: $YOUR.BB.URL:8000/diapers/
+                url: $YOUR.BB.URL:8000/diapers/
                 persistent: true
                 title: Baby Buddy
       - conditions:
@@ -196,7 +206,7 @@ action:
               type: Solid
               color: Yellow
             target:
-              entity_id: sensor.baby_FIRSTNAME_LASTNAME
+              entity_id: sensor.baby_$BABY_$NAME
           - service: counter.increment
             data: {}
             target:
@@ -207,8 +217,8 @@ action:
               message: |
                 Solid Diaper Logged!
               data:
-                clickAction: http://YOUR.BB.IP.ADDRESS:8000/diapers/
-                url: http://YOUR.BB.IP.ADDRESS:8000/diapers/
+                clickAction: $YOUR.BB.URL:8000/diapers/
+                url: $YOUR.BB.URL:8000/diapers/
                 persistent: true
                 title: Baby Buddy
       - conditions:
@@ -220,7 +230,7 @@ action:
               type: Solid
               color: Green
             target:
-              entity_id: sensor.baby_FIRSTNAME_LASTNAME
+              entity_id: sensor.baby_$BABY_$NAME
           - service: counter.increment
             data: {}
             target:
@@ -231,8 +241,8 @@ action:
               message: |
                 Solid Diaper Logged!
               data:
-                clickAction: http://YOUR.BB.IP.ADDRESS:8000/diapers/
-                url: http://YOUR.BB.IP.ADDRESS:8000/diapers/
+                clickAction: $YOUR.BB.URL:8000/diapers/
+                url: $YOUR.BB.URL:8000/diapers/
                 persistent: true
                 title: Baby Buddy
       - conditions:
@@ -244,7 +254,7 @@ action:
               type: Solid
               color: Brown
             target:
-              entity_id: sensor.baby_FIRSTNAME_LASTNAME
+              entity_id: sensor.baby_$BABY_$NAME
           - service: counter.increment
             data: {}
             target:
@@ -255,8 +265,8 @@ action:
               message: |
                 Solid Diaper Logged!
               data:
-                clickAction: http://YOUR.BB.IP.ADDRESS:8000/diapers/
-                url: http://YOUR.BB.IP.ADDRESS:8000/diapers/
+                clickAction: $YOUR.BB.URL:8000/diapers/
+                url: $YOUR.BB.URL:8000/diapers/
                 persistent: true
                 title: Baby Buddy
       - conditions:
@@ -265,13 +275,13 @@ action:
         sequence:
           - if:
               - condition: template
-                value_template: "{{state_attr('sensor.FIRSTNAME_LASTNAME_last_timer', 'active')}}"
+                value_template: "{{state_attr('sensor.$BABY_$NAME_last_timer', 'active')}}"
             then:
               - service: babybuddy.add_sleep
                 data:
                   timer: true
                 target:
-                  entity_id: switch.FIRSTNAME_LASTNAME_timer
+                  entity_id: switch.$BABY_$NAME_timer
               - service: notify.all_phones
                 data:
                   title: Baby Buddy
@@ -279,24 +289,24 @@ action:
                     Sleep Logged Duration: {{
                     states.sensor.bb_timer_formatted.state }}
                   data:
-                    clickAction: http://YOUR.BB.IP.ADDRESS:8000/sleep/
+                    clickAction: $YOUR.BB.URL:8000/sleep/
                     url: |
-                      http://YOUR.BB.IP.ADDRESS:8000/sleep/
+                      $YOUR.BB.URL:8000/sleep/
                     persistent: true
                     title: Baby Buddy
             else:
               - service: switch.turn_on
                 data: {}
                 target:
-                  entity_id: switch.FIRSTNAME_LASTNAME_timer
+                  entity_id: switch.$BABY_$NAME_timer
               - service: notify.all_phones
                 data:
                   title: Baby Buddy
                   message: |
                     Sleep Timer Started
                   data:
-                    clickAction: http://YOUR.BB.IP.ADDRESS:8000/timers/
-                    url: http://YOUR.BB.IP.ADDRESS:8000/timers/
+                    clickAction: $YOUR.BB.URL:8000/timers/
+                    url: $YOUR.BB.URL:8000/timers/
                     persistent: true
                     title: Baby Buddy
       - conditions:
@@ -327,11 +337,11 @@ action:
               amount: |
                 {{wait.trigger.event.data["reply_text"] }}
             target:
-              entity_id: sensor.baby_FIRSTNAME_LASTNAME
+              entity_id: sensor.baby_$BABY_$NAME
           - wait_for_trigger:
               - platform: state
                 entity_id:
-                  - sensor.FIRSTNAME_LASTNAME_last_pumping
+                  - sensor.$BABY_$NAME_last_pumping
                 attribute: amount
             timeout:
               hours: 0
@@ -343,10 +353,10 @@ action:
               title: Baby Buddy
               message: |
                 Pumping Logged
-                Amount: {{states('sensor.FIRSTNAME_LASTNAME_last_pumping')}} Ounces
+                Amount: {{states('sensor.$BABY_$NAME_last_pumping')}} Ounces
               data:
-                clickAction: http://YOUR.BB.IP.ADDRESS:8000/feedings/
-                url: http://YOUR.BB.IP.ADDRESS:8000/feedings/
+                clickAction: $YOUR.BB.URL:8000/feedings/
+                url: $YOUR.BB.URL:8000/feedings/
                 persistent: true
                 title: Baby Buddy
       - conditions:
@@ -355,19 +365,20 @@ action:
         sequence:
           - if:
               - condition: template
-                value_template: "{{state_attr('sensor.FIRSTNAME_LASTNAME_last_timer', 'active')}}"
+                value_template: "{{state_attr('sensor.$BABY_$NAME_last_timer', 'active')}}"
             then:
               - service: babybuddy.add_feeding
                 data:
                   timer: true
-                  type: Solid food
-                  method: Parent fed
+                  type: Breast milk
+                  method: Bottle
                 target:
-                  entity_id: switch.FIRSTNAME_LASTNAME_timer
+                  entity_id: switch.$BABY_$NAME_timer
               - service: counter.increment
                 data: {}
                 target:
-                  entity_id: counter.bb_diaper_counterpumping_counter
+                  entity_id:
+                    - counter.bb_feeding_counter
               - service: input_text.set_value
                 data:
                   value: ""
@@ -382,26 +393,26 @@ action:
                 data:
                   title: Baby Buddy
                   message: >
-                    Solid Food Logged Duration: {{
+                    Bottle Feeding Logged Duration: {{
                     states.sensor.bb_timer_formatted.state }}
                   data:
-                    clickAction: http://YOUR.BB.IP.ADDRESS:8000/feedings/
-                    url: http://YOUR.BB.IP.ADDRESS:8000/feedings/
+                    clickAction: $YOUR.BB.URL:8000/feedings/
+                    url: $YOUR.BB.URL:8000/feedings/
                     persistent: true
                     title: Baby Buddy
             else:
               - service: switch.turn_on
                 data: {}
                 target:
-                  entity_id: switch.FIRSTNAME_LASTNAME_timer
+                  entity_id: switch.$BABY_$NAME_timer
               - service: notify.all_phones
                 data:
                   title: Baby Buddy
                   message: |
                     Solid Food Timer Started
                   data:
-                    clickAction: http://YOUR.BB.IP.ADDRESS:8000/timers/
-                    url: http://YOUR.BB.IP.ADDRESS:8000/timers/
+                    clickAction: $YOUR.BB.URL:8000/timers/
+                    url: $YOUR.BB.URL:8000/timers/
                     persistent: true
                     title: Baby Buddy
       - conditions:
@@ -410,13 +421,13 @@ action:
         sequence:
           - if:
               - condition: template
-                value_template: "{{state_attr('sensor.FIRSTNAME_LASTNAME_last_timer', 'active')}}"
+                value_template: "{{state_attr('sensor.$BABY_$NAME_last_timer', 'active')}}"
             then:
               - service: babybuddy.add_tummy_time
                 data:
                   timer: true
                 target:
-                  entity_id: switch.FIRSTNAME_LASTNAME_timer
+                  entity_id: switch.$BABY_$NAME_timer
               - service: notify.all_phones
                 data:
                   title: Baby Buddy
@@ -424,23 +435,23 @@ action:
                     Tummy Time Logged! Duration: {{
                     states.sensor.bb_timer_formatted.state }}
                   data:
-                    clickAction: http://YOUR.BB.IP.ADDRESS:8000/tummy-time/
-                    url: http://YOUR.BB.IP.ADDRESS:8000/tummy-time/
+                    clickAction: $YOUR.BB.URL:8000/tummy-time/
+                    url: $YOUR.BB.URL:8000/tummy-time/
                     persistent: true
                     title: Baby Buddy
             else:
               - service: switch.turn_on
                 data: {}
                 target:
-                  entity_id: switch.FIRSTNAME_LASTNAME_timer
+                  entity_id: switch.$BABY_$NAME_timer
               - service: notify.all_phones
                 data:
                   title: Baby Buddy
                   message: |
                     Tummy Time Timer Started
                   data:
-                    clickAction: http://YOUR.BB.IP.ADDRESS:8000/timers/
-                    url: http://YOUR.BB.IP.ADDRESS:8000/timers/
+                    clickAction: $YOUR.BB.URL:8000/timers/
+                    url: $YOUR.BB.URL:8000/timers/
                     persistent: true
                     title: Baby Buddy
     enabled: true
