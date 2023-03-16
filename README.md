@@ -36,8 +36,8 @@ Please ignore the poor print quality, haven't had time to recalibrate the printe
 - The V2 top case has cutouts for the LED pixels and for the common ground wire. This can be printed without supports, your printer must be at least *kinda* dialed in. You can see my pictures--my printer isn't all that calibrated, and I was still able to print this without supports. The real trick is to print it SLOWLY. The slower you print it, the better chance you'll have of not knocking off the the little center posts, plus your bridging will be better. I dialed my printer back to 35mm/s on both walls and infill and all the way down to 25mm/s for bridging. 
 - You will probably want to set your slicer to print the external perimeters first. The case is designed for the key switches to be pressure fit. Printing the outer walls first will help keep the print from over expanding and making your switches not fit. You can also dial back your flow settings to help keep things fitting as they should. If you're still struggling, you can also increase the dimensions of the STLs by 1 or 2 percent to help things fit a bit easier. NOTE: I have not tested printing the case larger, so I don't know how well the LEDs will fit when you size it up.
 - Finally, I'm not a 3D designer or engineer. I adapted the original design from thingiverse for my needs using Tinkercad. 
-- https://www.tinkercad.com/things/466cJwJKiFd
-- 
+- https://www.tinkercad.com/things/466cJwJKiFd-macropadv2topver37
+- https://www.tinkercad.com/things/ekNTHmUWMJU-esp32macropadbottoms
 
 
 ## Assembly
