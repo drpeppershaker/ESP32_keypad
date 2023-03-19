@@ -11,6 +11,7 @@ Version 1 does not have LEDs, Version 2 uses 16 addressable LEDs to give an 8 pi
 
 
 ## Images
+![](/assets/V2/
 ![](/assets/V2/RGB_Lighting_Demo.gif)
 Please ignore the poor print quality, haven't had time to recalibrate the printer with the baby here!
 
