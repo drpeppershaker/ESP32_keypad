@@ -233,7 +233,7 @@ binary_sensor:
             format: "Double Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad
+            event: esphome.esp32_keypad_V2
             data:
               title: dbl_click
               button: b1
@@ -249,7 +249,7 @@ binary_sensor:
             format: "Triple Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad
+            event: esphome.esp32_keypad_V2
             data:
               title: triple_click
               button: b1
@@ -261,7 +261,7 @@ binary_sensor:
             format: "Single Long Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad
+            event: esphome.esp32_keypad_V2
             data:
               title: long_click
               button: b1
@@ -272,7 +272,7 @@ binary_sensor:
             format: "Click and Hold"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad
+            event: esphome.esp32_keypad_V2
             data:
               title: hold
               button: b1
@@ -284,7 +284,7 @@ binary_sensor:
             format: "Single Short Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad
+            event: esphome.esp32_keypad_V2
             data:
               title: single_click
               button: b1
@@ -320,7 +320,7 @@ binary_sensor:
             format: "Double Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad
+            event: esphome.esp32_keypad_V2
             data:
               title: dbl_click
               button: b2
@@ -336,7 +336,7 @@ binary_sensor:
             format: "Triple Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad
+            event: esphome.esp32_keypad_V2
             data:
               title: triple_click
               button: b2
@@ -348,7 +348,7 @@ binary_sensor:
             format: "Single Long Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad
+            event: esphome.esp32_keypad_V2
             data:
               title: long_click
               button: b2
@@ -359,7 +359,7 @@ binary_sensor:
             format: "Click and Hold"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad
+            event: esphome.esp32_keypad_V2
             data:
               title: hold
               button: b2
@@ -371,7 +371,7 @@ binary_sensor:
             format: "Single Short Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad
+            event: esphome.esp32_keypad_V2
             data:
               title: single_click
               button: b2
@@ -406,7 +406,7 @@ binary_sensor:
             format: "Double Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad
+            event: esphome.esp32_keypad_V2
             data:
               title: dbl_click
               button: b3
@@ -422,7 +422,7 @@ binary_sensor:
             format: "Triple Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad
+            event: esphome.esp32_keypad_V2
             data:
               title: triple_click
               button: b3
@@ -434,7 +434,7 @@ binary_sensor:
             format: "Single Long Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad
+            event: esphome.esp32_keypad_V2
             data:
               title: long_click
               button: b3
@@ -445,7 +445,7 @@ binary_sensor:
             format: "Click and Hold"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad
+            event: esphome.esp32_keypad_V2
             data:
               title: hold
               button: b3
@@ -457,7 +457,7 @@ binary_sensor:
             format: "Single Short Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad
+            event: esphome.esp32_keypad_V2
             data:
               title: single_click
               button: b3
@@ -492,7 +492,7 @@ binary_sensor:
             format: "Double Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad
+            event: esphome.esp32_keypad_V2
             data:
               title: dbl_click
               button: b4
@@ -508,7 +508,7 @@ binary_sensor:
             format: "Triple Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad
+            event: esphome.esp32_keypad_V2
             data:
               title: triple_click
               button: b4
@@ -520,7 +520,7 @@ binary_sensor:
             format: "Single Long Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad
+            event: esphome.esp32_keypad_V2
             data:
               title: long_click
               button: b4
@@ -531,7 +531,7 @@ binary_sensor:
             format: "Click and Hold"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad
+            event: esphome.esp32_keypad_V2
             data:
               title: hold
               button: b4
@@ -543,7 +543,7 @@ binary_sensor:
             format: "Single Short Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad
+            event: esphome.esp32_keypad_V2
             data:
               title: single_click
               button: b4
@@ -578,7 +578,7 @@ binary_sensor:
             format: "Double Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad
+            event: esphome.esp32_keypad_V2
             data:
               title: dbl_click
               button: b5
@@ -594,7 +594,7 @@ binary_sensor:
             format: "Triple Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad
+            event: esphome.esp32_keypad_V2
             data:
               title: triple_click
               button: b5
@@ -606,7 +606,7 @@ binary_sensor:
             format: "Single Long Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad
+            event: esphome.esp32_keypad_V2
             data:
               title: long_click
               button: b5
@@ -617,7 +617,7 @@ binary_sensor:
             format: "Click and Hold"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad
+            event: esphome.esp32_keypad_V2
             data:
               title: hold
               button: b5
@@ -629,7 +629,7 @@ binary_sensor:
             format: "Single Short Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad
+            event: esphome.esp32_keypad_V2
             data:
               title: single_click
               button: b5
@@ -664,7 +664,7 @@ binary_sensor:
             format: "Double Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad
+            event: esphome.esp32_keypad_V2
             data:
               title: dbl_click
               button: b6
@@ -680,7 +680,7 @@ binary_sensor:
             format: "Triple Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad
+            event: esphome.esp32_keypad_V2
             data:
               title: triple_click
               button: b6
@@ -692,7 +692,7 @@ binary_sensor:
             format: "Single Long Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad
+            event: esphome.esp32_keypad_V2
             data:
               title: long_click
               button: b6
@@ -703,7 +703,7 @@ binary_sensor:
             format: "Click and Hold"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad
+            event: esphome.esp32_keypad_V2
             data:
               title: hold
               button: b6
@@ -715,7 +715,7 @@ binary_sensor:
             format: "Single Short Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad
+            event: esphome.esp32_keypad_V2
             data:
               title: single_click
               button: b6
@@ -750,7 +750,7 @@ binary_sensor:
             format: "Double Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad
+            event: esphome.esp32_keypad_V2
             data:
               title: dbl_click
               button: b7
@@ -766,7 +766,7 @@ binary_sensor:
             format: "Triple Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad
+            event: esphome.esp32_keypad_V2
             data:
               title: triple_click
               button: b7
@@ -778,7 +778,7 @@ binary_sensor:
             format: "Single Long Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad
+            event: esphome.esp32_keypad_V2
             data:
               title: long_click
               button: b7
@@ -789,7 +789,7 @@ binary_sensor:
             format: "Click and Hold"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad
+            event: esphome.esp32_keypad_V2
             data:
               title: hold
               button: b7
@@ -801,7 +801,7 @@ binary_sensor:
             format: "Single Short Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad
+            event: esphome.esp32_keypad_V2
             data:
               title: single_click
               button: b7
@@ -836,7 +836,7 @@ binary_sensor:
             format: "Double Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad
+            event: esphome.esp32_keypad_V2
             data:
               title: dbl_click
               button: b8
@@ -852,7 +852,7 @@ binary_sensor:
             format: "Triple Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad
+            event: esphome.esp32_keypad_V2
             data:
               title: triple_click
               button: b8
@@ -864,7 +864,7 @@ binary_sensor:
             format: "Single Long Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad
+            event: esphome.esp32_keypad_V2
             data:
               title: long_click
               button: b8
@@ -875,7 +875,7 @@ binary_sensor:
             format: "Click and Hold"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad
+            event: esphome.esp32_keypad_V2
             data:
               title: hold
               button: b8
@@ -887,7 +887,7 @@ binary_sensor:
             format: "Single Short Clicked"
             level: INFO
         - homeassistant.event:
-            event: esphome.esp32_keypad
+            event: esphome.esp32_keypad_V2
             data:
               title: single_click
               button: b8
