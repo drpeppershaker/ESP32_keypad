@@ -52,6 +52,8 @@ LEDs wired and test fit
 ![](/assets/V2/Inside_V2.JPG)
 All switches are now **connected to common GND** rather than common VIN.
 
+NOTE: When wiring up the LED pixels, you *can* have a single solid wire for all the 5V and GND contacts. The data pins must be separated, and move from DIN to DOUT--they can't be bridged from DOUT to DIN. Stick to the wiring diagram for the Data Line.
+
 
 ## Programming
 - Add your ESP device to Home Assistant once detected
