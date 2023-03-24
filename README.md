@@ -85,4 +85,4 @@ inspired by:
 - [blank template courtesy of X-keys](https://xkeys.com/)
 
 Special Thanks:
-- @jesserockz & @ssieb on the [ESPHome Discord](https://discord.com/invite/KhAMKrd) for all the support getting this thing working.
+- [jesserockz](https://github.com/jesserockz) & [ssieb](https://github.com/ssieb) on the [ESPHome Discord](https://discord.com/invite/KhAMKrd) for all the support getting this thing working.
