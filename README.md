@@ -30,6 +30,7 @@ Version 1 has no LED lights, Version 2 uses 16 addressable LEDs to give an 8 pix
 - [ESPHome integration](https://www.home-assistant.io/integrations/esphome/)
 
 ## Case
+[STL files here](/3D_files)
 - I 3D printed my case. I've included two versions of the macropad case bottom. The images from V1 is using the 'short_bottom'. The short bottom version of the case makes things *really* tight, but everything should fit if you are careful with your wiring. Run the wires along the sides of the board, and keep them trimmed short. That said, If you don't want to put your soldering skills and smash and cram skills to the test, I also included a slightly taller version as well. The V2 version of the keypad w/ the LEDs that I made was testing my patience already, so I just put it in the taller version of the case. Certainly much easier, and not *that* much taller overall.
 
 - The V2 top case has cutouts for the LED pixels and for the common ground wire. This can be printed without supports, your printer must be at least *kinda* dialed in. You can see my pictures--my printer isn't all that calibrated, and I was still able to print this without supports. The real trick is to print it SLOWLY. The slower you print it, the better chance you'll have of not knocking off the the little center posts, plus your bridging will be better. I dialed my printer back to 35mm/s on both walls and infill and all the way down to 25mm/s for bridging. 
@@ -83,8 +84,14 @@ inspired by:
 - https://github.com/sfgabe/OITProjects/tree/master/Baby_Buddy_Keypad 
 - https://github.com/jeroenterheerdt/Baby-Buddy-Keypad. 
 
+STLs:
+- Remixed from ['Macro Pad' on Thingiverse](https://www.thingiverse.com/thing:5628107) by tomtompoperdom
+
+icons:
 - [Icons for keypad courtesy of Freepik on Flaticon](https://www.flaticon.com/authors/freepik)
 - [blank template courtesy of X-keys](https://xkeys.com/)
+
+
 
 Special Thanks:
 - [jesserockz](https://github.com/jesserockz) & [ssieb](https://github.com/ssieb) on the [ESPHome Discord](https://discord.com/invite/KhAMKrd) for all the support getting this thing working.
