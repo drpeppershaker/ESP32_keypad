@@ -66,7 +66,7 @@ NOTE: When wiring up the LED pixels, you *can* have a single solid wire for all 
 - Add your ESP device to Home Assistant once detected
 - Install esp32_keypad.yaml
 - Add your own automations (you can use the one here for inspiration). 
-  - Note: this version uses events rather than binary sensors for recording clicks.
+  - Note: this uses events rather than binary sensors for recording multi-clicks.
 
 
 
