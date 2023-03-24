@@ -24,6 +24,8 @@ Version 1 does not have LEDs, Version 2 uses 16 addressable LEDs to give an 8 pi
 | Addressable LEDs     | https://amzn.to/3yH5whK | https://www.amazon.com/dp/B01DC0J0WS | I used these pixels because all the LED strips I have are low density and the Pixels are too spread out. I really wanted to cram two LEDs behind each key switch, and this seems like the simplest way to achieve that. After building two keypads with LEDs, I think that someone who isn't me should attempt this with an LED strip with 144 pixel/m strips. You should be able to fit two leds behind each key with that kind of density.                                 |
 | Tiny Screws/Bolts | ... | ... | I used some ~~2.5mm~~ 3mm x 20mm hex bolts for the case, and I think some 2.5mm x 3mm screws to hold the board down.                                                                                                                                                               |
 
+<p align="center"><sup>If you choose to use the above affiliate links I <i>may</i> receive a very small commision from Amazon at no extra cost to you</sup></p>
+
 ## Requirements
 - [Home Assistant installation](https://www.home-assistant.io)
 - [ESPHome integration](https://www.home-assistant.io/integrations/esphome/)
