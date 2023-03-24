@@ -74,8 +74,9 @@ NOTE: When wiring up the LED pixels, you *can* have a single solid wire for all 
 
 
 ## Icons
-I've included individual icons, a printable template, and a blank template for printing out your own icons for your relegendable keycaps.
-[icons here](../main/icons/)
+[icons here](/icons)
+- I've included individual icons, a printable template, and a blank template for printing out your own icons for your relegendable keycaps.
+
 
 
 
