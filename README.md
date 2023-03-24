@@ -1,15 +1,14 @@
 # ESP32_keypad V2
+This DIY macropad uses an ESP32 with [ESPHome](https://esphome.io/).<br>
+It has 8 keys, and supports different actions for single, double, and triple clicks, long clicks, and click and holds.
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/drpeppershaker/ESP32_keypad/V2/assets/V2/Top_V2.JPG" width=41% />
   <img src="https://github.com/drpeppershaker/ESP32_keypad/blob/V2/assets/V2/RGB_Lighting_Demo.gif" width =54% />
    <br><sup>Please ignore the poor print quality, haven't had time to recalibrate the printer with the baby here!</sup>
 </p>
 
-
-This DIY macropad uses an ESP32 with [ESPHome](https://esphome.io/).<br>
-It has 8 keys, and supports single, double, and triple clicks, long clicks, and click and holds.
-
-Version 1 does not have LEDs, Version 2 uses 16 addressable LEDs to give an 8 pixel backlight and an individually addressable light for each keypress.
+Version 1 has no LED lights, Version 2 uses 16 addressable LEDs to give an 8 pixel backlight and an individually addressable light for each keypress.
 
 
 
