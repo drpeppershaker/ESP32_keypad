@@ -1,21 +1,15 @@
 # ESP32_keypad V2
-
-inspired by: 
-- https://github.com/sfgabe/OITProjects/tree/master/Baby_Buddy_Keypad 
-- https://github.com/jeroenterheerdt/Baby-Buddy-Keypad. 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/drpeppershaker/ESP32_keypad/V2/assets/V2/Top_V2.JPG" width=41% height=41% />
+  <img src="https://github.com/drpeppershaker/ESP32_keypad/blob/V2/assets/V2/RGB_Lighting_Demo.gif" width = 54% height =54% />
+</p>
+Please ignore the poor print quality, haven't had time to recalibrate the printer with the baby here!
 
 This DIY macropad uses an ESP32 with [ESPHome](https://esphome.io/).<br>
 It has 8 keys, and supports single, double, and triple clicks, long clicks, and click and holds.
 
 Version 1 does not have LEDs, Version 2 uses 16 addressable LEDs to give an 8 pixel backlight and an individually addressable light for each keypress.
 
-
-## Images
-<p float="left">
-  <img src="https://raw.githubusercontent.com/drpeppershaker/ESP32_keypad/V2/assets/V2/Top_V2.JPG" width=41% height=41% />
-  <img src="https://github.com/drpeppershaker/ESP32_keypad/blob/V2/assets/V2/RGB_Lighting_Demo.gif" width = 54% height =54% />
-</p>
-Please ignore the poor print quality, haven't had time to recalibrate the printer with the baby here!
 
 
 ## Parts
@@ -80,5 +74,15 @@ NOTE: When wiring up the LED pixels, you *can* have a single solid wire for all 
 I've included individual icons, a printable template, and a blank template for printing out your own icons for your relegendable keycaps.
 [icons here](../main/icons/)
 
-[Icons for keypad courtesy of Freepik on Flaticon](https://www.flaticon.com/authors/freepik)
-[blank template courtesy of X-keys](https://xkeys.com/)
+
+
+## Credits
+inspired by: 
+- https://github.com/sfgabe/OITProjects/tree/master/Baby_Buddy_Keypad 
+- https://github.com/jeroenterheerdt/Baby-Buddy-Keypad. 
+
+- [Icons for keypad courtesy of Freepik on Flaticon](https://www.flaticon.com/authors/freepik)
+- [blank template courtesy of X-keys](https://xkeys.com/)
+
+Special Thanks:
+- @jesserockz & @ssieb on the [ESPHome Discord](https://discord.com/invite/KhAMKrd) for all the support getting this thing working.
