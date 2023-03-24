@@ -11,11 +11,11 @@ Version 1 does not have LEDs, Version 2 uses 16 addressable LEDs to give an 8 pi
 
 
 ## Images
-![](/assets/V2/Top_V2.JPG)
+<p float="left">
+  <img src="https://raw.githubusercontent.com/drpeppershaker/ESP32_keypad/V2/assets/V2/Top_V2.JPG" width=41% height=41% />
+  <img src="https://github.com/drpeppershaker/ESP32_keypad/blob/V2/assets/V2/RGB_Lighting_Demo.gif" width = 54% height =54% />
+</p>
 Please ignore the poor print quality, haven't had time to recalibrate the printer with the baby here!
-
-![](/assets/V2/RGB_Lighting_Demo.gif)
-Lighting effect
 
 
 ## Parts
@@ -48,11 +48,22 @@ Lighting effect
 -- Note, your GPIO pins may be different based on the version of the board you use. I'm using the built-in PULLUP resistors on the ESP32 board for the switches. If you need to switch GPIO pins, make sure you use pins that have PULLUP resistors.
 ![](/assets/V2/wiring_diagram_V2.png)
 
-![](/assets/V2/LED_Layout.JPG)
-LEDs wired and test fit
+<br><br>
+<table>
+<tbody>
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/drpeppershaker/ESP32_keypad/V2/assets/V2/LED_Layout.JPG"></th>
+    <td><img src="https://raw.githubusercontent.com/drpeppershaker/ESP32_keypad/V2/assets/V2/Inside_V2.JPG"></th>
+  </tr>
+  <tr>
+    <td>Leds Wired and test fit.</td>
+    <td>All switches **connected to common GND** rather than VIN.</td>
+  </tr>
+</tbody>
+</table>
 
-![](/assets/V2/Inside_V2.JPG)
-All switches are now **connected to common GND** rather than common VIN.
+
+
 
 NOTE: When wiring up the LED pixels, you *can* have a single solid wire for all the 5V and one for all the GND contacts. However, the data contacts must be separated and move from DIN to DOUT--they can't be connected on the same pixel or they will NOT work. Stick to the wiring diagram for the Data Line.
 
