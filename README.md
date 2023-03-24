@@ -1,7 +1,7 @@
 # ESP32_keypad V2
 <p align="center">
-  <img src="https://raw.githubusercontent.com/drpeppershaker/ESP32_keypad/V2/assets/V2/Top_V2.JPG" width=41% height=41% />
-  <img src="https://github.com/drpeppershaker/ESP32_keypad/blob/V2/assets/V2/RGB_Lighting_Demo.gif" width = 54% height =54% />
+  <img src="https://raw.githubusercontent.com/drpeppershaker/ESP32_keypad/V2/assets/V2/Top_V2.JPG" width=41% />
+  <img src="https://github.com/drpeppershaker/ESP32_keypad/blob/V2/assets/V2/RGB_Lighting_Demo.gif" width =54% />
 </p>
 Please ignore the poor print quality, haven't had time to recalibrate the printer with the baby here!
 
