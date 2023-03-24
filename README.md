@@ -1,5 +1,5 @@
 # ESP32_keypad V2
-This DIY macropad uses an ESP32 with [ESPHome](https://esphome.io/).<br>
+This DIY macropad uses an ESP32 with [ESPHome](https://esphome.io/). <br>
 It has 8 keys, and supports different actions for single, double, and triple clicks, long clicks, and click and holds.
 
 <p align="center">
