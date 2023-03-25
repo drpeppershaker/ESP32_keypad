@@ -49,7 +49,7 @@ Version 1 has no LED lights, Version 2 uses 16 addressable LEDs to give an 8 pix
 
 ## Assembly
 - all switches are now connected to common GND and to their respective GPIOs (see ESPHome YAML files)
--- Note, your GPIO pins may be different based on the version of the board you use. I'm using the built-in PULLUP resistors on the ESP32 board for the switches. If you need to switch GPIO pins, make sure you use pins that have PULLUP resistors.
+  - Note, your GPIO pins may be different based on the version of the board you use. I'm using the built-in PULLUP resistors on the ESP32 board for the switches. If you need to switch GPIO pins, make sure you use pins that have PULLUP resistors.
 ![](/assets/V2/wiring_diagram_V2.png)
 
 <br><br>
