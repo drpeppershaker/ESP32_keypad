@@ -14,7 +14,9 @@ It has 8 keys, and supports different actions for single, double, and triple cli
 </p>
 
 ## Versions
+### NO_LED 
 - As the names suggest, the NO_LED version does not use any LEDs. This keeps the cost and soldering skills required lower.
+### LED
 - The LED version uses 16 addressable LEDs -- 8 LEDs for RGB backlighting with various effects and 1 LED for each individual key for reactive keypresses. This version is a few millimeters taller than the NO_LED version to accommodate the LED Pixels.
 
 
