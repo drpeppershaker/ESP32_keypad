@@ -3,10 +3,12 @@
 This DIY macropad uses an ESP32 with [ESPHome](https://esphome.io/) in order to control devices or trigger automations in [Home Assistant](https://home-assistant.io). <br>
 It has 8 keys, and supports different actions for single, double, and triple clicks, long clicks, and click and holds.
 
+
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/drpeppershaker/ESP32_keypad/V2/assets/LED/Top_LED.JPG" width=41% />
   <img src="https://github.com/drpeppershaker/ESP32_keypad/blob/V2/assets/LED/RGB_Lighting_Demo.gif" width =54% />
-  <br>LED Version<br>
+  <br>LED Version<br><br>
   <img src="https://raw.githubusercontent.com/drpeppershaker/ESP32_keypad/main/assets/top.JPG" width=41% />
   <br>NO_LED version
 </p>
@@ -69,7 +71,7 @@ NOTE: When wiring up the LED pixels, you *can* have a single solid wire for all 
 
 ### Case
 [STL files here](/3D_files)
-- I 3D printed my case. I've included two versions of the macropad case bottom. The images from V1 is using the 'short_bottom'. The short bottom version of the case makes things *really* tight, but everything should fit if you are careful with your wiring. Run the wires along the sides of the board, and keep them trimmed short. That said, If you don't want to put your soldering skills and smash and cram skills to the test, I also included a slightly taller version as well. The V2 version of the keypad w/ the LEDs that I made was testing my patience already, so I just put it in the taller version of the case. Certainly much easier, and not *that* much taller overall.
+- I 3D printed my case. I've included two versions of the macropad case bottom. The images from V1 is using the 'short_bottom'. The short bottom version of the case makes things very tight, but everything should fit if you are careful with your wiring. Run the wires along the sides of the board, and keep them trimmed short. That said, If you don't want to put your soldering skills and smash and cram skills to the test, I also included a slightly taller version as well. The V2 version of the keypad w/ the LEDs that I made was testing my patience already, so I just put it in the taller version of the case. Certainly much easier, and not *that* much taller overall.
 
 - The V2 top case has cutouts for the LED pixels and for the common ground wire. This can be printed without supports, your printer must be at least *kinda* dialed in. You can see my pictures--my printer isn't all that calibrated, and I was still able to print this without supports. The real trick is to print it SLOWLY. The slower you print it, the better chance you'll have of not knocking off the the little center posts, plus your bridging will be better. I dialed my printer back to 35mm/s on both walls and infill and all the way down to 25mm/s for bridging. 
 - You will probably want to set your slicer to print the external perimeters first. The case is designed for the key switches to be pressure fit. Printing the outer walls first will help keep the print from over expanding and making your switches not fit. You can also dial back your flow settings to help keep things fitting as they should. If you're still struggling, you can also increase the dimensions of the STLs by 1 or 2 percent to help things fit a bit easier. NOTE: I have not tested printing the case larger, so I don't know how well the LEDs will fit when you size it up.
@@ -78,6 +80,13 @@ NOTE: When wiring up the LED pixels, you *can* have a single solid wire for all 
   - [Macropad Bottoms on Tinkercad](https://www.tinkercad.com/things/ekNTHmUWMJU-esp32macropadbottoms)
 
 </details>
+
+
+
+
+
+
+
 <details><summary><h2>NO_LED VERSION</summary></h2>
   
 ### Tools
@@ -116,9 +125,9 @@ NOTE: When wiring up the LED pixels, you *can* have a single solid wire for all 
 
 ### Case
 [STL files here](/3D_files)
-- I 3D printed my case. I've included two versions of the macropad case bottom. The images from V1 is using the 'short_bottom'. The short bottom version of the case makes things *really* tight, but everything should fit if you are careful with your wiring. Run the wires along the sides of the board, and keep them trimmed short. That said, If you don't want to put your soldering skills and smash and cram skills to the test, I also included a slightly taller version as well. The V2 version of the keypad w/ the LEDs that I made was testing my patience already, so I just put it in the taller version of the case. Certainly much easier, and not *that* much taller overall.
+- I 3D printed my case. I've included two versions of the macropad case bottom. The images from the NO_LED version is using the 'short_bottom'. The short bottom version of the case makes things very tight, but everything should fit if you are careful with your wiring. Run the wires along the sides of the board, and keep them trimmed short. That said, If you don't want to put your soldering skills and smash and cram skills to the test, I also included a slightly taller version as well.
 
-- The V2 top case has cutouts for the LED pixels and for the common ground wire. This can be printed without supports, your printer must be at least *kinda* dialed in. You can see my pictures--my printer isn't all that calibrated, and I was still able to print this without supports. The real trick is to print it SLOWLY. The slower you print it, the better chance you'll have of not knocking off the the little center posts, plus your bridging will be better. I dialed my printer back to 35mm/s on both walls and infill and all the way down to 25mm/s for bridging. 
+- You can use the LED version of the case and it will still work well for the non-led version of the keypad. However, the LED version of the case requires your printer to be more dialed in, and you will likely need to print slower because it has more overhangs.
 - You will probably want to set your slicer to print the external perimeters first. The case is designed for the key switches to be pressure fit. Printing the outer walls first will help keep the print from over expanding and making your switches not fit. You can also dial back your flow settings to help keep things fitting as they should. If you're still struggling, you can also increase the dimensions of the STLs by 1 or 2 percent to help things fit a bit easier. NOTE: I have not tested printing the case larger, so I don't know how well the LEDs will fit when you size it up.
 - Finally, I'm not a 3D designer or engineer. I adapted the original design from thingiverse for my needs using Tinkercad. 
   - [Macropad Top on Tinkercad](https://www.tinkercad.com/things/466cJwJKiFd-macropadv2topver37)
