@@ -1,12 +1,19 @@
-# ESP32_keypad V2
+# ESP32_keypad
 This DIY macropad uses an ESP32 with [ESPHome](https://esphome.io/) in order to control devices or trigger automations in [Home Assistant](https://home-assistant.io). <br>
 It has 8 keys, and supports different actions for single, double, and triple clicks, long clicks, and click and holds.
 
+## Versions
+As the names suggest, the NO_LED version does not use any LEDs. This keeps the cost and soldering skills required lower.
+The LED version uses 16 addressable LEDs -- 8 LEDs for RGB backlighting and 1 LED for each individual key for reactive keypresses.
+
 ## Images
 <p align="center">
+
   <img src="https://raw.githubusercontent.com/drpeppershaker/ESP32_keypad/V2/assets/V2/Top_V2.JPG" width=41% />
+   <br><sup>LED Version</sup><br>
   <img src="https://github.com/drpeppershaker/ESP32_keypad/blob/V2/assets/V2/RGB_Lighting_Demo.gif" width =54% />
-   <br><sup>Please ignore the poor print quality, haven't had time to recalibrate the printer with the baby here!</sup>
+  <img src="https://raw.githubusercontent.com/drpeppershaker/ESP32_keypad/main/assets/top.JPG" width=41% />
+  <br><sup>NO_LED version</sup>
 </p>
 
 Version 1 has no LED lights, Version 2 uses 16 addressable LEDs to give an 8 pixel backlight and an individually addressable light for each keypress.
