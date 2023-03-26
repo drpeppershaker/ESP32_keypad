@@ -11,9 +11,9 @@ It has 8 keys, and supports different actions for single, double, and triple cli
 
   <img src="https://raw.githubusercontent.com/drpeppershaker/ESP32_keypad/V2/assets/LED/Top_LED.JPG" width=41% />
   <img src="https://github.com/drpeppershaker/ESP32_keypad/blob/V2/assets/LED/RGB_Lighting_Demo.gif" width =54% />
-  <br><sup>LED Version</sup><br>
+  <br>LED Version<br>
   <img src="https://raw.githubusercontent.com/drpeppershaker/ESP32_keypad/main/assets/top.JPG" width=41% />
-  <br><sup>NO_LED version</sup>
+  <br>NO_LED version
 </p>
 
 ## Requirements
