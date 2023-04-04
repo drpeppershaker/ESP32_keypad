@@ -26,7 +26,7 @@ It has 8 keys, and supports different actions for single, double, and triple cli
 
 ## Building the Macro Pad
 
-<details><summary><h2>LED VERSION</summary></h2>
+<details><summary><h2>LED VERSION</h2> (Click to expand) </summary>
 
 ### Tools
 | **Tool**                   | **Non Referral Link**                | **Referral Link**                    | **Notes**                                                                                                                                                                                                                                                 |
@@ -69,6 +69,8 @@ It has 8 keys, and supports different actions for single, double, and triple cli
 </tbody>
 </table>
 
+The LED pixels are sold in a 10x10 grid. The PCBs for each LED are attached to one another, but they are easy to break apart. You will want to keep them attached in two separate 'strips' of 8 connected leds each. Don't try to break them into individual pixels because they'll fall through the case.
+
 NOTE: When wiring up the LED pixels, you *can* have a single solid wire for all the 5V and one for all the GND contacts. However, the data contacts must be separated and move from DIN to DOUT--they can't be connected on the same pixel or they will NOT work. Stick to the wiring diagram for the Data Line.
 
 ### Case
@@ -89,7 +91,7 @@ NOTE: When wiring up the LED pixels, you *can* have a single solid wire for all 
 
 
 
-<details><summary><h2>NO_LED VERSION</summary></h2>
+<details><summary><h2>NO_LED VERSION</h2>  (Click to expand) </summary>
   
 ### Tools
 | **Tool**                   | **Non Referral Link**                | **Referral Link**                    | **Notes**                                                                                                                                                                                                                                                 |
@@ -121,9 +123,6 @@ NOTE: When wiring up the LED pixels, you *can* have a single solid wire for all 
 <br><br>
 
 ![](/assets/NO_LED/inside_NO_LED.JPG)
-
-
-NOTE: When wiring up the LED pixels, you *can* have a single solid wire for all the 5V and one for all the GND contacts. However, the data contacts must be separated and move from DIN to DOUT--they can't be connected on the same pixel or they will NOT work. Stick to the wiring diagram for the Data Line.
 
 ### Case
 [STL files here](/3D_files)
