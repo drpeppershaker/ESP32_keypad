@@ -6,10 +6,10 @@ It has 8 keys, and supports different actions for single, double, and triple cli
 
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/drpeppershaker/ESP32_keypad/V2/assets/LED/Top_LED.JPG" width=41% />
-  <img src="https://github.com/drpeppershaker/ESP32_keypad/blob/V2/assets/LED/RGB_Lighting_Demo.gif" width =54% />
+  <img src="https://github.com/drpeppershaker/ESP32_keypad/blob/main/assets/LED/Top_LED.JPG" width=41% />
+  <img src="https://github.com/drpeppershaker/ESP32_keypad/blob/main/assets/LED/RGB_Lighting_Demo.gif" width =54% />
   <br>LED Version<br><br>
-  <img src="https://raw.githubusercontent.com/drpeppershaker/ESP32_keypad/main/assets/top.JPG" width=41% />
+  <img src="https://github.com/drpeppershaker/ESP32_keypad/blob/main/assets/NO_LED/top_NO_LED.JPG" width=41% />
   <br>NO_LED version
 </p>
 
