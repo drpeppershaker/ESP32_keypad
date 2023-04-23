@@ -59,8 +59,8 @@ It has 8 keys, and supports different actions for single, double, and triple cli
 <table>
 <tbody>
   <tr>
-    <td><img src="https://raw.githubusercontent.com/drpeppershaker/ESP32_keypad/V2/assets/LED/LED_Layout.JPG"></th>
-    <td><img src="https://raw.githubusercontent.com/drpeppershaker/ESP32_keypad/V2/assets/LED/Inside_LED.JPG"></th>
+    <td><img src="https://github.com/drpeppershaker/ESP32_keypad/blob/main/assets/LED/LED_Layout.JPG"></th>
+    <td><img src="https://github.com/drpeppershaker/ESP32_keypad/blob/main/assets/LED/Inside_LED.JPG"></th>
   </tr>
   <tr>
     <td>Leds Wired and test fit.</td>
