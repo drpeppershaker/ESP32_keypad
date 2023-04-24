@@ -1,6 +1,6 @@
 # ESP32_keypad
 
-This DIY macropad uses an ESP32 with [ESPHome](https://esphome.io/) in order to control devices or trigger automations in [Home Assistant](https://home-assistant.io). <br>
+This DIY macropad is built with only off-the-shelf parts. No custom PCBs for absolute ease of building! It uses an ESP32 with [ESPHome](https://esphome.io/) in order to control devices or trigger automations in [Home Assistant](https://home-assistant.io). <br>
 It has 8 keys, and supports different actions for single, double, and triple clicks, long clicks, and click and holds.
 
 
